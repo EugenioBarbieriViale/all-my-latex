@@ -1,0 +1,118 @@
+\documentclass[]{article}
+\usepackage{amsmath}
+
+\title{Risoluzione Quesiti}
+\author{Eugenio Barbieri Viale}
+\date{3 dicembre 2023}
+
+\begin{document}
+\maketitle
+
+\section{Cilindro equilibrista}
+\begin{enumerate}
+	\item Il sistema deve essere in equilibrio traslazionale e rotazionale. Perciò la forza e il momento risultanti devono
+		essere nulli. 
+		\begin{equation}	
+			\begin{cases}
+				P_x=F_a\\
+				M_g=M_a
+			\end{cases}
+		\end{equation}	
+
+		L'angolo compreso tra il raggio vettore $\hat{r}$ e la forza peso $\vec{P}$ è il supplementare di $\alpha$. Quest'angolo e $\alpha$ sono infatti angoli coniugati rispetto all'asse verticale del cilindro e alla retta su cui giace il vettore $\vec{P}$, che sono paralleli. Sia $\mu_s$ il coefficiente d'attrito statico:
+		\begin{equation}	
+			\begin{cases}
+				mg\sin{\theta}=mg\cos{\theta}\mu_s\\
+				mgr\sin({180-\alpha})=mgR\cos{\theta}\mu_s
+			\end{cases}
+		\end{equation}	
+		Dato che il seno di un angolo è uguale al seno del supplementare dell'angolo stesso:
+		\begin{equation}	
+			\begin{cases}
+				\mu_s=\frac{\sin{\theta}}{{\cos{\theta}}}\\
+				r\sin{\alpha}=R\cos{\theta}\mu_s
+			\end{cases}
+		\end{equation}	
+		\begin{equation}	
+			\begin{cases}
+				\mu_s=\tan{\theta}\\
+				\sin{\alpha}=\frac{R\cos{\theta}\mu_s}{r}
+			\end{cases}
+		\end{equation}	
+		Soluzione:
+		$$\alpha=\arcsin\left({\frac{R\sin{\theta}}{r}}\right)$$
+
+	\item Nel caso limite di $\theta$, deve essere garantito l'equilibrio translazionale e rotazionale. Risolvendo lo stesso sistema per $\theta$, si ottiene che:
+		$$\theta_{lim}=\arcsin\left({\frac{r\sin{\alpha}}{R}}\right)$$
+\end{enumerate}
+
+
+\section{Pendolo su un piano inclinato}
+\begin{enumerate}
+	\item Nei pendoli semplici la componente tangenziale della forza peso $\vec{P_t}=m\vec{g}\sin{\alpha}$, con $\alpha$ l'angolo compreso tra il filo e l'asse verticale. In questo pendolo, poichè il corpo che oscilla appoggia su un piano inclinato, $\vec{P_t}=m\vec{g}\sin{\alpha}\sin{\theta}$, con $\theta$ l'angolo di inclinazione del piano. Se d è la distanza tra la sfera e l'asse verticale e $l=L+r$:
+	$$\sin{\alpha}=\frac{d}{l} \rightarrow \vec{P_t}=m\vec{g}\frac{d}{l}\sin{\theta}$$
+	Per piccoli angoli, d può essere approssimata con la lunghezza dell'arco s. Inoltre, per il secondo principio della dinamica, $\vec{P_t}=m\vec{a}$. Sapendo anche che il verso dell'accellerazione è opposto a quello dello spostamento del pendolo dalla sua posizone di equilibrio:
+	$$m\vec{a}=-m\vec{g}\frac{\vec{s}}{l}\sin{\theta} \rightarrow \vec{a}=-\frac{\vec{g}\sin{\theta}}{l}\vec{s}$$
+	Essendo quello del pendolo un moto armonico, l'accelerazione è del tipo $\vec{a}=-\omega^2\vec{s}$ con
+	$$\omega^2=\frac{g\sin{\theta}}{l} \rightarrow \omega=\sqrt{\frac{g\sin{\theta}}{l}}$$
+	Infine:
+	$$T=\frac{2\pi}{\omega} \rightarrow T=\frac{2\pi}{\sqrt{\frac{g\sin{\theta}}{l}}}$$
+	Soluzione:
+	$$T=2\pi\sqrt{\frac{L+r}{g\sin{\theta}}}$$
+
+	\item Nel sistema l'unica forza ad imprimere un momento è quella d'attrito:
+	$$M_{ris}=M_a \rightarrow M_{ris}=\mu mg\cos{\theta}r$$
+	In un corpo rigido che ruota intorno al suo asse, vale la relazione $M_{ris}=I\alpha$, con $\alpha$ l'accelerazione angolare. Quindi:
+	$$\alpha=\frac{M_{ris}}{I} \rightarrow \alpha=\frac{\mu mg\cos{\theta}r}{\beta mr^2} \rightarrow \alpha=\frac{\mu g\cos{\theta}}{\beta r}$$
+	In un moto di puro rotolamento, l'accelerazione del centro di massa $a_g=\alpha r$. Risulta perciò che:
+	$$a_g=\frac{\mu g\cos{\theta}}{\beta}$$
+	Sapendo inoltre che nel pendolo l'accelerazione del corpo attaccato al filo è $a=\omega^2(L+r)$:
+	$$\frac{\mu g\cos{\theta}}{\beta}=\frac{4\pi^2(L+r)}{T^2} \rightarrow T^2=4\pi^2\frac{\beta(L+r)}{\mu g\cos{\theta}}$$
+	Soluzione:
+	$$T=2\pi\sqrt{\frac{\beta(L+r)}{\mu g\cos{\theta}}}$$
+\end{enumerate}
+
+\section{Trasporto di calore}
+	\begin{enumerate}
+		\item La legge di Fourier afferma che la potenza calorica trasmessa per conduzione in un materiale segue la relazione
+			$$P=-k_1\frac{S}{h_1}(T_B-T_A)$$
+	\end{enumerate}
+
+\section{Corda massiva su un cuneo}
+	\begin{enumerate}
+		\item A causa della disposizione della corda, è possibile considerare due centri di massa, uno per la parte sinistra $G_1$ e uno per la parte destra $G_2$ della corda rispetto alla punta del cuneo. Nei due centri di massa sono applicate rispettivamente le forze peso $P_1$ e $P_2$. La parte sinistra è inoltre affetta da una forza di attrito $F_{a1}$, mentre quella destra da $F_{a2}$. Affinchè la corda sia in equilibrio, la risultante delle forze deve essere nulla.
+		$$\vec{P_1}+\vec{P_2}+\vec{F_{a1}}+\vec{F_{a2}}=0$$
+		 L'equilibrio deve essere verificato dalle componenti delle forze parallele al piano inclinato. Quando $x>L$:
+		 $$P_{2//}-P_{1//}-F_{a1}-F_{a2}=0$$
+		Dato che è una corda, il suo volume è approssimabile alla sua lunghezza s. Quindi la sua massa $m=s\lambda$. Sapendo che l'angolo di inclinazione di ciascun lato del cuneo è pari al complementare di $\alpha$ e sfruttando la trigonometria:
+		$$\lambda xg\cos{\alpha}-\lambda(2L-x)g\cos{\alpha}-\lambda xg\sin{\alpha}\mu-\lambda(2L-x)g\sin{\alpha}\mu=0$$
+		Elidendo $\lambda$ e g e svolgendo le parentesi:
+		$$x\cos{\alpha}-2L\cos{\alpha}+x\cos{\alpha}-x\sin{\alpha}\mu-2L\sin{\alpha}\mu+x\sin{\alpha}\mu=0$$
+		Quindi:
+		$$2x\cos{\alpha}-2L\cos{\alpha}-2L\sin{\alpha}\mu=0$$
+		Infine, esplicitando x, si trova che:
+		$$x=\frac{\cos{\alpha}+\sin{\alpha}\mu}{\cos{\alpha}}L$$
+		Se invece $x<L$, le condizioni di equilibrio sono:
+		$$P_{1//}-P_{2//}-F_{a1}-F_{a2}=0$$
+		Risolvendo com fatto sopra, si ottiene:
+		$$x=\frac{\cos{\alpha}-\sin{\alpha}\mu}{\cos{\alpha}}L$$
+		\item L'equilibrio è garantito per ogni x quando è verificato nei casi limite, quindi per $x=2L$ e $ x=0$. Infatti in questi casi, in cui la corda si trova su un solo lato del cuneo, la componente parallela del peso assume il suo valore massimo, poichè questa forza "spinge" in un'unica direzione. Quindi:
+		$$P_{//}=F_a \rightarrow mg\sin({90-\alpha})=mg\cos({90-\alpha})\mu \rightarrow \cos{\alpha}=\sin{\alpha}\mu$$
+		Di conseguenza:
+		$$\mu=\frac{\cos{\alpha}}{\sin{\alpha}} \rightarrow \mu=\tan({\alpha})^{-1}$$
+	\end{enumerate}
+
+\section{Oscillazione in salse varie (9)}
+	\begin{enumerate}
+		\item Il teorema di Carnot (o teorema del coseno) enuncia che
+		$$a^2+b^2-2ab\cos{\theta}=c^2$$
+		in cui c è il lato del triangolo opposto all'angolo $\theta$. Questo teorema è applicabile nel problema per trovare l'angolo tra il raggio del disco e la molla quando quest'ultima è allungata al massimo, ovvero nel momento in cui il disco sta per cominciare a cambiare il senso di rotazione. Indicando con l l'allungamento, si arriva quindi alla relazione:
+		$$R^2+(2R+l)^2-2R(2R+l)\cos{\theta}=9R^2$$
+		Esplicitando per $\theta$:
+		$$\theta=\arccos\left({-\frac{4R^2-4Rl-l^2}{4R^2+2Rl}}\right)$$
+		Il momento creato dalla forza elastica $F_e$ è $M=F_e\sin{\theta}R$. Sapendo inoltre che nei corpi rigidi che ruotano intorno al proprio asse $M=I\alpha$, con I il momento d'inerzia (che nel disco è $I=\frac{1}{4}mR^2$) e $\alpha$ l'accelerazione angolare:
+		$$F_e\sin{\theta}R=\frac{1}{4}mR^2\alpha$$
+		Esplicitando:
+		$$\alpha=\frac{4F_e\sin{\theta}}{mR}$$
+	\end{enumerate}
+\end{document}
