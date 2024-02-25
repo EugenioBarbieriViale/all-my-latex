@@ -68,7 +68,47 @@
 		$$\frac{(x-x_c)^2}{a^2}+\frac{(y-y_c)^2}{b^2}=1$$
 		Ci si riconduce a questa forma utilizzando il completamento del quadrato.
 	\item L'area racchiusa da un'ellisse è $A=\pi ab$
+\end{itemize}
+
+\section{Iperbole}
+\begin{itemize}
+	\item L'iperbole è il luogo di punti P tali che sia costante la differenza dai due fuochi. In particolare vale 2a.
+	\item L'equazione:
+		$$\frac{x^2}{a^2}-\frac{y^2}{b^2}=1 \hspace{2em} \text{Se i fuochi sono sull'asse x (asse trasverso $2a$)}$$
+		$$\frac{x^2}{a^2}-\frac{y^2}{b^2}=-1 \hspace{2em} \text{Se i fuochi sono sull'asse y (asse trasverso $2b$)}$$
+		Mentre i coefficienti di $x^2$ e $y^2$ nell'ellisse sono concordi, nell'iperbole sono discordi.
+	\item L'asse trasvero è l'asse che contiene i fuochi. Contiene inoltre i vertici detti reali. L'asse non trasvero contiene invece i vertici non reali.
+	\item La semidistanza focale $c$:
+		$$c^2=a^2+b^2$$
+	\item L'eccentricità $e$:
+		$$e=\frac{c}{a}=\frac{\sqrt{a^2+b^2}}{a} \hspace{2em} \text{Se i fuochi sono sull'asse x}$$
+		$$e=\frac{c}{b}=\frac{\sqrt{a^2+b^2}}{b} \hspace{2em} \text{Se i fuochi sono sull'asse y}$$
+		Maggiore è l'eccentricità, maggiormente sono aperti i rami dell'iperbole. Inoltre $e>1$, poichè $c>a>0$
+	\item L'iperbole ha due asintoti passanti per l'origine. Uno passa per $P_1(a,b)$, l'altro passa per $P_2(a,-b)$. La loro equazione è:
+		$$y=\pm\frac{b}{a}x$$
+	\item Le posizioni reciproche tra iperbole e retta sono 4: secante in due punti, tangente, esterna, secante in un punto (la retta è parallela a un asintoto)
+	\item Per trovare le tangenti a un iperbole basta applicare il metodo spiegato con l'ellisse. La formula di sdoppiamento:
+		$$\frac{xx_0}{a^2}-\frac{yy_0}{b^2}=\pm 1$$
+	\item Un'iperbole traslata di vettore $\vec{v}(x_c;y_c)$ ha centro $C(x_c;y_c)$ e ha equazione:
+		$$\frac{(x-x_c)^2}{a^2}-\frac{(y-y_c)^2}{b^2}=\pm 1$$
+	\item Si dice equilatera un'iperbole che ha gli asintoti perpendicolari. Di conseguenza:
+		$$a=b \hspace{3em} e=\sqrt{2} \hspace{3em} \text{Asintoti:} \hspace{1em} y=\pm x$$
+		Gli asintoti sono quindi le bisettrice degli quadranti.
+	\item L'iperbole equilatera si riferisce: agli assi di simmetria, in cui gli asintoti coincidono con le bisettrici dei quadranti, agli asintoti, in cui gli asintoti coincidono con gli assi cartesiani.
+	\item Ruotando in senso antiorario di $45^{\circ}$ l'iperbole equilatera, si ottiene una funzione con dominio $D_0$ ed è chiamata omografica. C'è inoltre proporzionalità inversa tra $x$ e $y$:
+		$$xy=k \hspace{2em} \text{con} \hspace{2em} k=\pm\frac{a^2}{2}$$
+		Le coordinate dei vertici sono $A_1(\sqrt{k};\sqrt{k})$ e $A_2(-\sqrt{k};-\sqrt{k})$
+	\item L'equazione dell'iperbole equilatera riferita agli asintoti (asintoti paralleli a assi cartesiani) è detta funzione omografica:
+		$$y=\frac{ax+b}{cx+d} \hspace {1em} \text{con} \hspace{1em} c\neq0 \hspace{1em} \text{e} \hspace{1em} ad-bc\neq0$$
+		Gli asintoti sono:
+		\begin{align*}
+			&\null x=-\frac{d}{c} \hspace{2em} \text{ovvero il valore di x che annulla il denominatore}\\
+			&\null y=\frac{a}{c} \hspace{2.9em} \text{ovvero il valore di y per} \hspace{0.5em} x\to\infty
+		\end{align*}
+		Il centro di simmetria è:
+		$$C(-\frac{d}{c};\frac{a}{c})$$
+		In realtà si può disegnare ogni funzione omografica facendo a meno del parametro $c$. Dividendo numeratore e denominatore per $c$ e rinominando i parametri si ottiene infatti:
+		$$y=\frac{Ax+B}{x+C}$$
 
 \end{itemize}
 \end{document}
-
