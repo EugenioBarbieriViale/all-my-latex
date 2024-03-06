@@ -1,0 +1,51 @@
+\documentclass[]{article}
+\usepackage{amsmath}
+
+\title{E58-59}
+\author{Eugenio Barbieri Viale}
+\date{4 marzo 2024}
+
+\begin{document}
+\maketitle
+
+Il centro di massa del sistema assa-proiettile si muove di moto rettilineo uniforme parallelamente alla direzione $y$. Ha quindi legge oraria:
+$$y(t)=v_{cm}t$$
+La distanza percorsa dal centro di massa in un periodo di rotazione $T$ è quindi:
+$$\Delta y=v_{cm}T$$
+Fissando l'origine del sistema di riferimento inerziale nel centro geometrico dell'asta prima dell'urto, il centro di massa ha coordinata $x_{cm}$ e velocità $v_{cm}$:
+$$x_{cm}=\frac{m}{2(m+M)}l \hspace{2em} v_{cm}=\frac{m}{m+M}v_0$$
+Se $\beta$ è il rapporto tra la massa dell'asta $M$ e la massa del proiettile $m$, allora si ottiene che $M=\beta m$. Sostituendo risulta che:
+$$x_{cm}=\frac{1}{2(\beta+1)}l \hspace{2em} v_{cm}=\frac{1}{\beta+1}v_0$$
+La distanza percorsa dal $CM$ in un periodo di rivoluzione dell'asta è perciò:
+$$\Delta y=\frac{1}{\beta+1}v_0 T$$
+Ora, sapendo che il sistema assa-proiettile è un sistema isolato, poichè la risultante dei momenti esterni è nulla (le forze tra asta e proiettile sono interne), il momento angolare si conserva. Inoltre, per il teorema di König:
+$$L_0=L_f \hspace{2em} \rightarrow \hspace{2em} L_0=L_{trasl}+L_{rot}$$
+$L_0$ e $L_{trasl}$ hanno come polo l'orgine del sistema di riferimento, mentre $L_{rot}$ è calcolato rispetto al $CM$. Dato che all'inizio l'asta è ferma:
+$$mv_0\frac{l}{2}=(m+M)v_{cm}x_{cm}+I_{cm}\omega$$
+Ora è necessario calcolare il momento d'inerzia del sistema rispetto al suo centro di massa. Applicando il teorema di Steiner:
+\begin{align}
+	I_{cm} &= \frac{1}{12}Ml^2 + Mx_{cm}^2 + m(\frac{1}{2}l-x_{cm})^2 \\
+		   &= \frac{\beta}{12}ml^2 + \beta ml^2\frac{1}{4(\beta+1)^2} + \frac{1}{4}ml^2(1-\frac{1}{\beta+1}) \\
+		   &= ml^2\left(\frac{\beta}{12}+\frac{\beta}{4(\beta+1)^2}+\frac{1}{4(\beta+1)^2}-\frac{1}{2(\beta+1)}+\frac{1}{4}\right) \\
+		   &= ml^2\left(\frac{\beta}{12}+\frac{\beta+1}{4(\beta+1)^2}-\frac{1}{2(\beta+1)}+\frac{1}{4}\right) \\
+		   &= ml^2\left(\frac{\beta}{12}+\frac{1}{4(\beta+1)}-\frac{1}{2(\beta+1)}+\frac{1}{4}\right) \\
+		   &= ml^2\left(\frac{\beta^2+\beta+3-6+3\beta+3}{12(\beta+1)}\right) \\
+		   &= ml^2\frac{\beta^2+4\beta}{12(\beta+1)}
+\end{align}
+Facendo tutte le sostituzioni necessarie nell'equazione dei momenti angolari:
+\begin{align}
+	&\frac{1}{2}mlv_0=(1+\beta)m\frac{1}{\beta+1}v_0\frac{1}{2(\beta+1)}l+ml^2\frac{\beta^2+4\beta}{12(\beta+1)}\frac{2\pi}{T} \\
+	&\frac{1}{2}v_0=\frac{1}{2(\beta+1)}v_0+\frac{2\pi l\beta(\beta+4)}{12T(\beta+1)} \\
+	&\frac{1}{2}(\beta+1)v_0=\frac{1}{2}v_0+\frac{2\pi l\beta(\beta+4)}{12T} \\
+	&6(\beta+1)v_0-6v_0=\frac{2\pi l\beta(\beta+4)}{T}
+\end{align}
+Alla fine si ottiene che il periodo:
+$$ T=\frac{\pi l(\beta+4)}{3v_0}$$
+Sostituendo nella legge oraria del $CM$ e facendo qualche altra semplificazione, si ottiene:
+$$y=\frac{\pi l(\beta+4)}{3(\beta+1)}$$
+Ora calcoliamo il rapporto tra la distanza percorsa e la lunghezza $l$ dell'asta, in modo da ottenere una quantità adimensionale:
+$$y(\beta)=\frac{\pi \beta+4\pi}{3\beta+3}$$
+Questa è evidentemente un'iperbole equilatera riferita agli asintoti. I suoi asintoti sono $x=-1$ e $y=\frac{\pi}{3}$. Ricordando che $\beta>0$, poichè è il rapporto tra due masse, e anche che $y\ge0$, dato che è una distanza, la massima distanza percorsa si trova all'intersezione con l'asse $y$. 
+$$\hspace{2em}$$
+Perciò la massima distanza percorsa durante una rivoluzione dell'asta si trova al tendere a $0$ del rapporto $\beta$ tra le due masse.
+\end{document}
