@@ -1,0 +1,61 @@
+\documentclass[]{article}
+
+\title{La Teoria Cinetica dei Gas}
+\author{Eugenio Barbieri Viale}
+\date{18 settembre 2024}
+
+\begin{document}
+\maketitle
+\setlength\parindent{0pt} % remove indentation
+
+\section*{Teoria Cinetica}
+Un gas composto da $N$ molecole si trova in contenitore cubico di lato $L$. 
+
+Devono essere rispettate le seguenti condizioni:
+\begin{itemize}
+    \item Il gas ha pressione e temperatura \textit{standard} e rimangono costanti
+    \item La densità del gas è bassa
+    \item $N$ è sufficientemente grande
+    \item Le molecole sono puntiformi
+    \item Gli urti con le pareti sono elastici
+    \item Gli urti tra molecole si trascurano
+\end{itemize}
+
+\vspace{2em}
+
+Si considera una molecola di massa $m$ che urta perpendicolarmente la parete destra $x$ del cubo. Prima dell'urto, essa ha quantità di moto $q_i = +m\vec{v}$, mentre poi $q_f = -m\vec{v}$. L'intervallo di tempo tra due urti consecutivi con la stessa parte è $\Delta t = \frac{2L}{v}$.
+
+\vspace{1em}
+Possiamo quindi trovare la forza media esercitata dalla parete sulla particella. Per il \textit{teorema dell'impulso}:
+$$\vec{F_m} = \frac{\vec{q_f}-\vec{q_i}}{\Delta t} = \frac{(-m\vec{v}) - (+m\vec{v})}{\frac{2L}{v}} = -\frac{mv^2}{L}$$
+
+Perciò la forza esercitata dalla particella sulla parete è quindi:
+$$F_m = +\frac{mv^2}{L}$$
+
+mentre la forza totale esercitata da tutte le molecole sulla parete destra $x$ è:
+$$F_x = \frac{m}{L} \sum_{i=1}^{N} v_{x,i}^2$$
+
+Sapendo che la pressione è data dal rapporto tra la componente perpendicolare di una forza e l'area della superficie, la pressione sulla parete $x$ è:
+$$p_x = \frac{F_x}{L^2} = \frac{m}{L^3} \sum_{i=1}^{N} v_{x,i}^2$$
+
+Questo vale anche per le pressioni $p_y$ e $p_z$ sulle pareti $y$ e $z$. La pressione totale è data dalla media di queste tre pressioni:
+$$p_{tot} = \frac{m}{3L^3} \sum_{i=1}^{N} (v_{x,i}^2 + v_{y,i}^2 + v_{z,i}^2)$$
+$$p_{tot} = \frac{Nm}{3L^3} \frac{\sum_{i=1}^{N} (v_{x,i}^2 + v_{y,i}^2 + v_{z,i}^2)}{N}$$
+$$p_{tot} = \frac{Nm}{3L^3} \frac{\sum_{i=1}^{N} v_i^2}{N}$$
+
+Infine:
+$$p_{tot} = \frac{Nm}{3L^3} \overline{v^2}$$
+
+Sapendo che, per definizione, la \textit{velocità quadratica media} è la radice quadrata della \textit{media dei quadrati delle velocità} ($v_{qm} = \sqrt{\overline{v^2}}$):
+$$p = \frac{Nm}{3V} v_{qm}^2$$
+$$pV = \frac{2N}{3} (\frac{1}{2}mv_{qm}^2)$$
+
+\vspace{2em}
+Di conseguenza:
+$$pV = \frac{2}{3}N \overline{K} \longleftrightarrow \overline{K} = \frac{3}{2}kT$$
+(dove $k$ è la \textit{costante di Boltzmann}, ovvero $\frac{R}{N_A}$)
+
+\vspace{3em}
+In conclusione, abbiamo quindi messo in relazione grandezze \textit{macroscopiche}, come la pressione, il volume e la temperatura, con grandezze \textit{microscopiche}, come l'energia cinetica delle particelle.
+
+\end{document}
