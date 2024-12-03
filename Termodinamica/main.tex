@@ -1,0 +1,150 @@
+\documentclass{article}
+
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{amsmath}
+\usepackage{siunitx}
+
+\title{Termodinamica}
+\author{Eugenio Barbieri Viale}
+
+\begin{document}
+\setlength{\parindent}{0pt}
+\maketitle
+
+\section*{Teoria cinetica}
+$$ n = \frac{N}{N_a} \hspace{1em} n = \frac{m_{totale}}{m_{atomica}} $$
+La massa totale è espressa in grammi, mentre quella atomica in dalton ($1u = \num{1.66e-27} kg$)
+
+\vspace{1em}
+
+Per un gas monoatomico:
+\begin{align*}
+    pV &= \frac{2}{3}N\overline{K} \\
+    \overline{K} &= \frac{3}{2}kT \\
+    v_{qm} &= \sqrt{\frac{3kT}{m}}
+\end{align*}
+Dove $m$ è la massa di una molecola, $T$ la temperatura e $k = \num{1.38e-23} J/K$
+
+\vspace{1em}
+
+In un gas a temperatura $T$, ogni grado di libertà di una molecola è associato a un'energia media pari a:
+$$ \frac{1}{2}kT $$
+
+\vspace{1em}
+
+L'energia interna di un gas monoatomico (1) e di un gas biatomico (2):
+\begin{align}
+    U &= \frac{3}{2}nRT \hspace{1em} \text{3 gradi di libertà}\\
+    U &= \frac{5}{2}nRT \hspace{1em} \text{5 gradi di libertà (vibrazione non considerata)}
+\end{align}
+
+\section*{Termodinamica}
+
+\subsection*{Primo principio}
+$$ \Delta U = Q - L $$
+\begin{itemize}
+    \item $Q > 0$: il sistema assorbe calore
+    \item $Q < 0$: il sistema cede calore
+    \item $L > 0$: il sistema compie lavoro 
+    \item $Q < 0$: il lavoro è compiuto dall'ambiente sul sistema
+\end{itemize}
+
+\section*{Trasformazioni termodinamiche}
+Trasformazione isobara (pressione costante):
+$$ L = p\Delta V $$
+
+\vspace{1em}
+
+Trasformazione isocora (volume costante):
+$$ L = 0 \longrightarrow \Delta U = Q $$
+
+\vspace{1em}
+
+Trasformazione isoterma (temperatura costante):
+$$ L = nRT\ln{\frac{V_f}{V_i}} $$
+$$ \Delta U = 0 \longrightarrow Q = L $$
+
+\vspace{1em}
+
+Trasformazione adiabatica (non viene scambiato calore):
+$$ L = \frac{3}{2}nR(T_i - T_f) $$
+$$ Q = 0 \longrightarrow \Delta U = -L $$
+
+\section*{Calore specifico}
+$$ Q = C_mn\Delta T $$
+dove $C_m$ è il calore specifico molare ($J/(mol \cdot K)$)
+
+\vspace{1em}
+
+Gas monoatomico: 
+\begin{align*}
+    C_p &= \frac{5}{2}R \hspace{1em} \text{pressione costante} \\
+    C_v &= \frac{3}{2}R \hspace{1em} \text{volume costante}
+\end{align*}
+
+\vspace{1em}
+
+Gas biatomico:
+\begin{align*}
+    C_p &= \frac{7}{2}R \hspace{1em} \text{pressione costante} \\
+    C_v &= \frac{5}{2}R \hspace{1em} \text{volume costante}
+\end{align*}
+
+Per un gas perfetto monoatomico:
+$$ \gamma = \frac{5}{3} $$
+Per un gas perfetto biatomico: 
+$$ \gamma = \frac{7}{5} $$
+
+\subsection*{Relazioni tra grandezze in trasformazioni adiabatiche}
+\begin{align*}
+    p_i(V_i)^{\gamma} &= p_f(V_f)^{\gamma} \\
+    T_i(V_i)^{\gamma-1} &= T_f(V_f)^{\gamma-1} \\
+    (p_i)^{1-\gamma}(T_i)^{\gamma} &= (p_f)^{1-\gamma}(T_f)^{\gamma}
+\end{align*}
+
+\section*{Macchine termiche}
+$$ Q_c > 0 \hspace{1em} Q_f < 0 \hspace{1em} L > 0 $$
+Rendimento di una macchina termica:
+$$ \eta = \frac{L}{Q_c} $$
+Dato che
+$$ L = Q_c + Q_f = Q_c - |Q_f| $$
+il rendimento può essere scritto anche:
+$$ \eta = 1 - \frac{|Q_f|}{Q_c} $$
+
+\vspace{1em}
+
+La macchina di Carnot è una macchina termica reversibile. Il suo rendimento:
+$$ \frac{|Q_f|}{Q_c} = \frac{T_f}{T_c} $$
+$$ \eta_{carnot} = 1 - \frac{T_f}{T_c} $$
+Questo è il rendimento massimo che una macchina termica può raggiungere operando tra le due temperature.
+
+\vspace{1em}
+
+Il ciclo di Carnot è composto da:
+\begin{itemize}
+    \item espansione isoterma a temperatura costante $T_c$
+    \item espansione adiabatica: la temperatura diminuisce da $T_c$ a $T_f$
+    \item compressione isoterma a temperatura costante $T_f$
+    \item compressione adiabatica: la temperatura ritorna $T_c$
+\end{itemize}
+
+\section*{Macchine frigorifere e pompe di calore}
+$$ Q_c < 0 \hspace{1em} Q_f > 0 \hspace{1em} L < 0 $$
+
+Qui vale la relazione:
+$$ |Q_c| = |L| + Q_f $$
+
+Macchina frigorifera:
+$$ COP = \frac{Q_f}{|L|} $$
+
+Pompa a calore:
+$$ COP = \frac{|Q_c|}{|L|} $$
+
+\section*{Entropia}
+In una trasformazione reversibile:
+$$ \Delta S = \frac{Q}{T} $$
+L'energia dell'universo non cambia in processi reversibili, mentre aumenta sempre in processi irreversibili. Questi ultimi causano un degrado dell'energia, una cui parte non è più utilizzabile. Il lavoro inutilizzato:
+$$ L_{inut} = T_f \Delta S_{univ} $$
+
+\end{document}
+
