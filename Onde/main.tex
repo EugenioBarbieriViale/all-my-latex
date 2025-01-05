@@ -1,0 +1,100 @@
+\documentclass{article}
+
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{amsmath}
+\usepackage{textcomp}
+
+\title{Onde}
+\author{Eugenio Barbieri Viale}
+
+\begin{document}
+\setlength{\parindent}{0pt}
+\maketitle
+
+\section*{Introduzione}
+\subsubsection*{Cos'è un'onda?}
+Un'onda è una perturbazione che si propaga nello spazio e trasporta energia senza che ci sia un trasporto di materia
+
+\subsubsection*{Diversi tipi di onda}
+\begin{itemize}
+    \item \textbf{onda trasversale}: le particelle del mezzo in cui si propaga l'onda oscillano perpendicolarmente alla direzione di propagazione
+    \item \textbf{onda longitudinale}: in un solido elastico, le particelle del mezzo in cui si propaga l'onda oscillano lungo la direzione di propagazione \textit{(come il suono)}
+\end{itemize}
+
+\subsubsection*{Caratteristiche}
+\begin{align*}
+    \lambda &= \text{lunghezza d'onda} = \text{distanza tra due creste} \\
+    T &= \text{periodo} = \text{$\Delta t$ in cui viene compiuta un'oscillazione completa} \\
+    f &= \text{frequenza} = \frac{1}{T} \\
+    v &= \text{velocità di propagazione} = \frac{\lambda}{T} = \lambda f \\
+    v &= \sqrt{\frac{F_t}{\mu}} \hspace{1em} \text{con} \hspace{1em} \mu = \frac{m}{L} = \text{densità lineare}
+\end{align*}
+
+\subsubsection*{Descrizione matematica di un'onda}
+$$ y = A \sin{\left(\omega t \pm kx\right)} $$
+$$ \text{dove} \hspace{1em} \omega = \frac{2\pi}{T} \hspace{1em} \text{e} \hspace{1em} k = \frac{2\pi}{\lambda} $$
+\begin{itemize}
+    \item \textbf{$+$} onda si propaga verso sinistra (\textit{direzione} $-x$)
+    \item \textbf{$-$} onda si propaga verso destra (\textit{direzione} $+x$)
+\end{itemize}
+
+\subsubsection*{Teorema di Fourier}
+\textbf{enunciato}: \textit{Qualsiasi funzione periodica con frequenza $f$ può essere scritta come somma di funzioni sinusoidali con frequenze che sono multipli di $f$}
+
+\section*{Il suono}
+\subsubsection*{L'ampiezza massima}
+$$ \Delta p_{max} = 2\pi fdvA $$
+in cui $f$ è la frequenza, $d$ è la densità del mezzo, $v$ è la velocità di propagazione dell'onda
+
+\subsubsection*{Velocità del suono in un gas}
+$$ v_{suono} = \sqrt{\gamma k_b \frac{T}{m}} $$
+$$ \text{dove} \hspace{1em} \gamma = \frac{c_p}{c_v} $$
+\begin{itemize}
+    \item $\gamma$ è il rapporto tra il calore specifico molare a pressione costante ($c_p$) e a volume costante ($c_v$)
+    \item \textbf{gas monoatomico} \textrightarrow \hspace{1em} $\gamma = \frac{5}{3}$
+    \item \textbf{gas biatomico} \textrightarrow \hspace{1em} $\gamma = \frac{7}{5}$
+\end{itemize}
+
+\subsubsection*{Intensità del suono}
+$$ I = \frac{P}{A} = \left[\frac{W}{m^2}\right] $$
+dove $P$ è la potenza sonora che attraversa perpendicolarmente una data superficie, $A$ è l'area della superficie
+
+\vspace{1em}
+
+$$ I = \frac{P}{4\pi r^2} $$
+se la sorgente emette onde sonore in maniera isotropa vale questa relazione. La superficie $A$ è quella di una sfera e $r$ è il raggio di essa, ovvero la distanza dalla sorgente
+
+\subsubsection*{Livello di intensità sonora}
+$$ \beta = 10 \log\frac{I}{I_0} $$
+con $I_0$ la soglia minima di intensità sonora udibile
+
+\subsubsection*{Effetto Doppler}
+\begin{align*}
+    f_r &= f_s \frac{1}{1 - \frac{v_s}{v}} \rightarrow \text{sorgente si avvicina a ricevitore fermo ($f_r$ \textit{aumenta)}} \\
+    f_r &= f_s \frac{1}{1 + \frac{v_s}{v}} \rightarrow \text{sorgente si allontana da ricevitore fermo($f_r$ \textit{diminuisce)}} \\
+    f_r &= f_s(1 + \frac{v_r}{v}) \rightarrow \text{ricevitore si avvicina a sorgente ferma ($f_r$ \textit{aumenta)}} \\
+    f_r &= f_s(1 - \frac{v_r}{v}) \rightarrow \text{ricevitore si allontana da sorgente ferma ($f_r$ \textit{diminuisce)}}
+\end{align*}
+Caso generale:
+$$ f_r = f_s\left(\frac{1 \pm \frac{v_r}{v}}{1 \pm \frac{v_s}{v}}\right) $$
+
+\subsubsection*{Diffrazione}
+$$ \sin{\theta} = \frac{\lambda}{D} $$
+dove $\theta$ è l'angolo di diffrazione, $D$ è la larghezza della fenditura attraverso la quale il suono passa
+
+\section*{Onde stazionarie}
+\textit{Le onde stazionarie sono onde che non si propagano ma rimangono confinate in una regione}
+
+\subsubsection*{Trasversali}
+$$ f_n = n \frac{v}{2L} \hspace{1em} n = 1,2,3,\dots $$
+Queste frequenze costituiscono la serie armonica. Le onde hanno $n$ ventri
+
+\subsubsection*{Longitudinali}
+$$ f_n = n \frac{v}{2L} \hspace{1em} n = 1,2,3,\dots $$
+il tubo ha lunghezza $L$ e ha le estremità aperte
+
+\vspace{1em}
+$$ f_n = (2n-1) \frac{v}{4L} \hspace{1em} n = 1,2,3,\dots $$
+il tubo ha lunghezza $L$ e ha un'estremità aperta
+
+\end{document}
