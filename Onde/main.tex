@@ -83,9 +83,32 @@ con $I_0$ la soglia minima di intensità sonora udibile
 Caso generale:
 $$ f_r = f_s\left(\frac{1 \pm \frac{v_r}{v}}{1 \pm \frac{v_s}{v}}\right) $$
 
+\subsubsection*{Interferenza}
+Si ha interferenza costruttiva nei punti di ampiezza massima, cioè quando:
+\begin{align*}
+    2A\cos{\left(\frac{\pi(x_2-x_1)}{\lambda}\right)} = \pm 1 \\
+    \frac{\pi(x_2-x_1)}{\lambda} = k\pi \\
+    \Delta x = k\lambda
+\end{align*}
+
+\vspace{1em}
+
+Si ha invece interferenza distruttiva nei punti di ampiezza nulla, cioè quando:
+\begin{align*}
+    2A\cos{\left(\frac{\pi(x_2-x_1)}{\lambda}\right)} = 0 \\
+    \frac{\pi(x_2-x_1)}{\lambda} = \frac{\pi}{2} + k\pi \\
+    \Delta x = \frac{1}{2}(2k+1)\lambda
+\end{align*}
+
+$x_1$ e $x_2$ sono le distanze rispettive dalle sorgenti $S_1$ e $S_2$ del punto $P$. \\
+$\Delta x = x_1-x_2$ è quindi la differenza di cammino
+
 \subsubsection*{Diffrazione}
 $$ \sin{\theta} = \frac{\lambda}{D} $$
 dove $\theta$ è l'angolo di diffrazione, $D$ è la larghezza della fenditura attraverso la quale il suono passa
+
+\subsubsection*{Battimenti}
+$$ f_{bat} = |f_1 - f_2| $$
 
 \section*{Onde stazionarie}
 \textit{Le onde stazionarie sono onde che non si propagano ma rimangono confinate in una regione}
@@ -100,6 +123,6 @@ il tubo ha lunghezza $L$ e ha le estremità aperte
 
 \vspace{1em}
 $$ f_n = (2n-1) \frac{v}{4L} \hspace{1em} n = 1,2,3,\dots $$
-il tubo ha lunghezza $L$ e ha un'estremità aperta
+il tubo ha lunghezza $L$ e ha un'estremità chiusa
 
 \end{document}
