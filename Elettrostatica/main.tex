@@ -1,0 +1,136 @@
+\documentclass[12pt]{article}
+
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{amsmath}
+
+\title{Elettrostatica}
+\author{Eugenio Barbieri Viale}
+\date{3 maggio 2025}
+
+\begin{document}
+\setlength{\parindent}{0pt}
+\maketitle
+
+\def \t {\textrightarrow}
+\def \v {\vspace{1em}}
+\def \bi {\begin{itemize}}
+\def \ei {\end{itemize}}
+\def \s[#1] {\section*{#1}}
+\def \ss[#1] {\subsection*{#1}}
+\def \sss[#1] {\subsubsection*{#1}}
+
+Costante dielettrica nel vuoto:
+$$ \varepsilon_0 = 8.854 \cdot 10^{-12} C^2/(Nm^2) $$
+
+Negli altri materiali:
+$$ \varepsilon = \varepsilon_0 \varepsilon_r $$
+
+\ss[Forza di Coulomb]
+$$ |\vec{F_c}| = \frac{1}{4\pi\varepsilon_0}\frac{|q_1||q_2|}{r^2} $$
+
+\ss[Campo elettrico]
+Per definizione:
+$$ \vec{E} = \frac{\vec{F}}{q_0} $$
+
+Di una carica puntiforme:
+$$ |\vec{E}| = \frac{k|q|}{r^2} $$
+
+Generato da un piano infinito uniformemente carico:
+$$ |\vec{E}| = \frac{\sigma}{2\varepsilon_0} $$
+
+In un condensatore:
+$$ |\vec{E}| = \frac{\sigma}{\varepsilon_0} $$
+
+Generato da un filo conduttore infinitamente lungo e uniformemente carico:
+$$ |\vec{E}| = \frac{\lambda}{2\pi\varepsilon_0} \frac{1}{r} $$
+
+Generato da una sfera isolante uniformemente carica:
+\begin{equation}
+    \begin{cases}
+        |\vec{E}| = \frac{Q}{4\pi\varepsilon_0 R^3}r \longrightarrow r \le R\\
+        |\vec{E}| = \frac{Q}{4\pi\varepsilon_0} \frac{1}{r^2} \longrightarrow r > R
+    \end{cases}
+\end{equation}
+
+\ss[Flusso]
+Per definizione:
+$$ \Phi_s(\vec{E}) = \vec{E} \cdot \vec{S} = |\vec{E}||\vec{S}|\cos{\varphi} $$
+
+Teorema di Gauss: \textit{Il flusso del campo elettrico attraverso una superficie gaussiana è uguale al rapporto tra la carica totale racchiusa nella superficie e la costante dielettrica}
+$$ \Phi_s(\vec{E}) = \frac{Q_{racchiusa}}{\varepsilon_0} $$
+
+\ss[Energia potenziale]
+La forza di coulomb è conservativa, e l'energia potenziale di un sistema di due cariche puntiformi è:
+$$ U = \frac{1}{4\pi\varepsilon_0}\frac{|q_1||q_2|}{r} $$
+considerando la distanza infinita come riferimento $U=0$
+
+\v
+
+In un sistema di $n$ cariche, le coppie possibili sono:
+$$ N = C_{n,2} = \frac{n!}{2!(n-2)!} = \frac{1}{2}n(n-1) $$
+
+\ss[Potenziale elettrico]
+Per definizione:
+$$ \Delta V = \frac{\Delta U}{q_0} $$
+
+In un condensatore con le armature a distanza $d$:
+$$ U = q|\vec{E}|d \longrightarrow V = |\vec{E}|d $$
+considerando l'armatura negativa come $U=0$ e $V=0$
+
+\v
+
+Per cariche puntiformi invece:
+$$ V = \frac{1}{4\pi\varepsilon_0}\frac{q}{r} $$
+considerando la distanza infinita come riferimento $V=0$
+
+\v
+
+\bi
+    \item una carica positiva accelera da una regione con potenziale maggiore a una con potenziale minore (seguendo il campo)
+    \item una carica negativa accelera da una regione con potenziale minore a una con potenziale maggiore
+\ei
+
+\v
+
+Le superifici equipotenziali sono sempre perpendicolari al campo elettrico \\
+Il lavoro che serve per spostare una carica lungo una superficie è nullo $L = 0$, poichè il prodotto scalare tra il vettore campo e il vettore spostamente è nullo $\cos{\varphi} = 0 \rightarrow \varphi = \frac{\pi}{2}$
+
+\v
+
+Il potenziale di una sfera conduttrice ($r$ distanza dal centro, $R$ raggio della sfera):
+$$ V = \frac{1}{4\pi\varepsilon_0}\frac{q}{r} \longrightarrow r \ge R $$
+
+All'interno della sfera:
+$$ V = \frac{1}{4\pi\varepsilon_0}\frac{q}{R} \longrightarrow r < R $$
+
+Il campo in funzione della variazione di potenziale:
+$$ E_s = -\frac{\Delta V}{\Delta s} $$
+dove $E_s$ è la componente del campo elettrico sul vettore spostamento $\Delta \vec{s}$
+
+\ss[Circuitazione]
+La circuitazione del campo elettrico lungo una curva $\gamma$:
+$$ \Gamma_{\gamma}(\vec{E}) = 0 $$
+
+\ss[Capacità]
+Per definizione:
+$$ C = \frac{q}{V} $$
+
+In una sfera:
+$$ C_{sfera} = 4\pi\varepsilon_0 R $$
+
+In un condensatore piano di area $A$ e con le armature a distanza $d$:
+$$ C = \frac{\varepsilon_0 \varepsilon_r A}{d} $$
+dove $\varepsilon_r$ è la costante dielettrica relativa del materiale tra le armature, \textbf{non} delle armature
+
+\v
+
+L'energia potenziale elettrica immagazzinata in un condensatore con differenza di potenziale $\Delta V$ e carica $q$:
+$$ U = \frac{1}{2}q \Delta V $$
+
+In funzione del campo:
+$$ U = \frac{1}{2} \varepsilon_0 \varepsilon_r AdE^2 $$
+
+La densità di energia:
+$$ \delta_{energia} = \frac{1}{2} \varepsilon_0 \varepsilon_r E^2 $$
+
+\end{document}
