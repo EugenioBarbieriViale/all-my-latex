@@ -1,0 +1,227 @@
+\documentclass[12pt]{article}
+
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\title{Limiti}
+\author{Eugenio Barbieri Viale}
+\date{27 maggio 2025}
+
+\begin{document}
+\setlength{\parindent}{0pt}
+
+\maketitle
+
+\def \v {\vspace{1em}}
+\def \bi {\begin{itemize}}
+\def \ei {\end{itemize}}
+\def \s[#1] {\section*{#1}}
+\def \ss[#1] {\subsection*{#1}}
+\def \sss[#1] {\subsubsection*{#1}}
+
+\s[Intorno di un punto]
+\textit{Dato un numero reale $x_0$, un intorno completo di $x_0$ è un qualunque intervallo aperto $I(x_0)$ contenente $x_0$}
+$$ I(x_0) = (x_0-\delta_1; x_0+\delta_2) $$
+con $\delta_1, \delta_2 \in R^+$
+
+\ss[Intorno circolare]
+L'intorno circolare è un intorno completo in cui $ \delta_1 = \delta_2, \in R^+$
+$$ I(x_0) = (x_0-\delta; x_0+\delta) $$
+
+\v
+
+L'intorno circolare può anche essere scritto come
+$$ I_{\delta}(x_0) = \{x \in R: |x-x_0|<\delta\} $$
+
+\ss[Intorno destro e sinistro]
+\bi
+    \item intorno sinistro di $x_0: I_{\delta} = (x_0 - \delta; x_0) $
+    \item intorno destro di $x_0: I_{\delta} = (x_0; x_0 + \delta) $
+\ei
+
+\ss[Corollario]
+\textit{L'intersezione e l'unione di due intorni completi, e in particolare circolari, di $x_0$ sono ancora intorni completi, e in particolare circolari, di $x_0$}
+
+\s[Estremo superiore]
+\textit{Dato un insieme $E \subset R$ superiormente limitato, l'estremo superiore di $E$ è quel numero reale $M$ per il quale:}
+\bi
+    \item $ M$ è maggiorante di $E$: $x \leq M, \forall x \in E $
+    \item $ \forall \varepsilon > 0 \hspace{0.5em} \exists x \in E: x > (M - \varepsilon)$
+\ei
+Se $sup_{E} \in E$ allora è anche massimo di $E$ ($max_E$)
+
+\v
+
+\textit{L'estremo superiore di un insieme non vuoto e superiormente limitato esiste sempre ed è unico}
+
+\s[Estremo inferiore]
+\textit{Dato un insieme $E \subset R$ inferiormente limitato, l'estremo inferiore di $E$ è quel numero reale $L$ per il quale:}
+\bi
+    \item $L$ è minorante di $E$: $x \geq L, \forall x \in E $
+    \item $ \forall \varepsilon > 0 \hspace{0.5em} \exists x \in E: x < (L + \varepsilon)$
+\ei
+Se $inf_E \in E$ allora è anche minimo di $E$ ($min_E$)
+
+\v
+
+\textit{L'estremo inferiore di un insieme non vuoto e inferiormente limitato esiste sempre ed è unico}
+
+\s[Punto isolato]
+\textit{Sia $x_0$ appartenente a un sottoinsieme $A$ di $R$. $x_0$ è un punto isolato di $A$ se esiste almeno un intorno $I$ di $x_0$ che non contiene altri elementi di $A$ diversi di $x_0$}
+
+\s[Punto di accumulazione]
+\textit{Il numero reale $x_0$ è un punto di accumulazione di $A \subset R$ se ogni intorno completo di $x_0$ contiene infiniti punti di $A$}
+
+\s[Limite]
+Si dice che $f(x)$ tende ad $l \in R$, per $x$ che tende a $x_0$, e si scrive:
+$$ \lim_{x \to x_0} f(x) = l $$
+se, comunque si fissa un intorno $U_{\varepsilon}(l)$ di raggio $\varepsilon$, esiste un $\delta > 0$, tale che, per ogni $x$ dell'intorno $I_{\delta}(x_0)$ di raggio $\delta$, privato di $x_0$, risulti:
+$$ f(x) \in U_{\varepsilon}(l) $$
+
+\v
+
+Oppure, comunque si fissa $\varepsilon > 0$, esiste un intorno $I(x_0) \cap D_f$ tale che, per ogni $x \in I(x_0) \wedge x\neq x_0$, si abbia:
+$$ |f(x) - l| < \varepsilon $$
+
+\v
+
+In simboli:
+$$ \lim_{x \to x_0} f(x) = l \rightarrow \forall \varepsilon > 0 \hspace{0.5em} \exists I(x_0): |f(x)-l| < \varepsilon, \forall x \in I(x_0), x\neq x_0 $$
+
+\ss[Limite per eccesso]
+L'intorno di $l$ è un intorno destro: $U_{\varepsilon}^{+}(l) = (l; l+\varepsilon)$
+$$ \lim_{x \to x_0} f(x) = l^{+} \rightarrow \forall \varepsilon > 0 \hspace{0.5em} \exists I(x_0): l < f(x) < l + \varepsilon, \forall x \in I(x_0), x\neq x_0 $$
+
+\ss[Limite per difetto]
+L'intorno di $l$ è un intorno sinistro $U_{\varepsilon}^{-}(l) = (l-\varepsilon; l)$
+$$ \lim_{x \to x_0} f(x) = l^{-} \rightarrow \forall \varepsilon > 0 \hspace{0.5em} \exists I(x_0): l - \varepsilon < f(x) < l, \forall x \in I(x_0), x\neq x_0 $$
+
+\ss[Limite destro]
+L'intorno di $x_0$ è un intorno destro: $I_{\delta}^{+}(x_0) = (x_0; x_0+\delta)$
+$$ \lim_{x \to x_0^{+}} f(x) = l \rightarrow \forall \varepsilon > 0 \hspace{0.5em} \exists I^{+}(x_0): |f(x) - l| < \varepsilon, \forall x \in I^{+}(x_0), x\neq x_0 $$
+
+\ss[Limite sinistro]
+L'intorno di $x_0$ è un intorno sinistro $I_{\delta}^{-}(x_0) = (x_0-\delta; x_0)$
+$$ \lim_{x \to x_0^{-}} f(x) = l \rightarrow \forall \varepsilon > 0 \hspace{0.5em} \exists I^{-}(x_0): |f(x) - l| < \varepsilon, \forall x \in I^{-}(x_0), x\neq x_0 $$
+
+\v
+
+Si osserva che:
+$$ \lim_{x \to x_0} f(x) = l \iff  \lim_{x \to x_0^{+}} f(x) = l \wedge \lim_{x \to x_0^{-}} f(x) = l $$
+
+\ss[Limite $\infty$ per $x$ che tende a un valore finito]
+Per $+\infty$:
+$$ \lim_{x \to x_0} f(x) = +\infty \rightarrow \forall M > 0 \hspace{0.5em} \exists I(x_0): f(x) > M, \forall x \in I(x_0), x\neq x_0 $$
+
+Per $-\infty$:
+$$ \lim_{x \to x_0} f(x) = -\infty \rightarrow \forall M > 0 \hspace{0.5em} \exists I(x_0): f(x) < -M, \forall x \in I(x_0), x\neq x_0 $$
+
+In questi casi si hanno degli asintoti verticali (destro per $x_0^{+}$, sinistro per $x_0^{-}$)
+
+\ss[Limite finito per $x$ che tende a $\infty$]
+Per $+\infty$:
+$$ \lim_{x \to +\infty} f(x) = l \rightarrow \forall \varepsilon > 0 \hspace{0.5em} \exists c > 0: |f(x)-l| < \varepsilon, \forall x > c $$
+
+Per $-\infty$:
+$$ \lim_{x \to -\infty} f(x) = l \rightarrow \forall \varepsilon > 0 \hspace{0.5em} \exists c > 0: |f(x)-l| < \varepsilon, \forall x < -c $$
+
+In questi casi si hanno degli asintoti orizzontali (destro per $+\infty$, sinistro per $-\infty$)
+
+\ss[Limite $\infty$ per $x$ che tende a $\infty$]
+Per $+\infty$, $+\infty$:
+$$ \lim_{x \to +\infty} f(x) = +\infty \rightarrow \forall \varepsilon > 0 \hspace{0.5em} \exists c > 0: f(x) > M, \forall x > c $$
+
+Per $-\infty$, $-\infty$:
+$$ \lim_{x \to -\infty} f(x) = -\infty \rightarrow \forall \varepsilon > 0 \hspace{0.5em} \exists c > 0: f(x) < -M, \forall x < -c $$
+
+\s[Continuità]
+Una funzione è continua nel suo dominio $D_f \subset R$ se:
+$$ \forall x \in D_f \rightarrow \lim_{x \to x_0} f(x) = f(x_0) $$
+
+\s[Limiti notevoli]
+\ss[Limite notevole 1]
+$$ \lim_{x \to 0} \frac{\sin{x}}{x} = 1 $$
+
+\textit{Dimostrazione:}
+$$ \frac{\sin{-x}}{-x} = \frac{-\sin{x}}{-x} = \frac{\sin{x}}{x} $$
+
+quindi:
+
+$$ \lim_{x \to 0^{+}} \frac{\sin{x}}{x} = \lim_{x \to 0^{-}} \frac{\sin{x}}{x} $$
+
+se $x\to 0^{+}$, si assume $x < \frac{\pi}{2}$, e quindi $\sin{x} > 0$
+
+$$ \sin{x} < x < \tan{x} $$
+
+$$ 1 < \frac{x}{\sin{x}} < \frac{1}{\cos{x}} $$
+
+$$ \lim_{x \to 0^{+}} 1 = 1 \hspace{1em} \lim_{x \to 0^{+}} \frac{1}{\cos{x}} = 1 $$
+
+Quindi, per il \textit{teorema dei due carabinieri}:
+
+$$ \lim_{x \to 0^{+}} \frac{\sin{x}}{x} = 1 \hspace{1em} \rightarrow \hspace{1em} \lim_{x \to 0} \frac{\sin{x}}{x} = 1 $$
+
+\ss[Limite notevole 2]
+$$ \lim_{x \to 0} \frac{1 - \cos{x}}{x} = 0 $$
+
+\textit{Dimostrazione:}
+$$ \frac{1 - \cos{x}}{x} \cdot \frac{1 + \cos{x}}{1 + \cos{x}} = \frac{1 - \cos{x}^2}{x(1 + \cos{x})} = \frac{\sin{x}^2}{x(1 + \cos{x})} $$
+
+$$ \lim_{x \to 0} = \frac{\sin{x}}{x} \cdot \sin{x} \cdot \frac{1}{1+\cos{x}} $$
+
+Per il \textit{teorema del prodotto dei limiti}:
+$$ \lim_{x \to 0} \frac{1 - \cos{x}}{x} = 1 \cdot 0 \cdot \frac{1}{2} = 0 $$
+
+\ss[Limite notevole 3]
+$$ \lim_{x \to 0} \frac{1 - \cos{x}}{x^2} = 0 $$
+
+\textit{Dimostrazione:}
+$$ \lim_{x \to 0} = \frac{\sin{x}}{x} \cdot \frac{\sin{x}}{x} \cdot \frac{1}{1+\cos{x}} $$
+
+$$ \lim_{x \to 0} \frac{1 - \cos{x}}{x^2} = 1 \cdot 1 \cdot \frac{1}{2} = \frac{1}{2} $$
+
+\ss[Limite notevole 4]
+$$ \lim_{x \to \pm \infty} \left(1 + \frac{1}{x}\right)^x = e $$
+
+\ss[Limite notevole 5]
+$$ \lim_{x \to 0} \frac{\ln(1 + x)}{x} = 1 $$
+
+In generale:
+$$ \lim_{x \to 0} \frac{\log_{a}(1 + x)}{x} = \log_a{e} $$
+
+\textit{Dimostrazione:}
+$$ \frac{\ln(1 + x)}{x} = \frac{1}{x}\ln(1 + x) = \ln\left((1+x)^{\frac{1}{x}}\right) $$
+
+$$ \lim_{x \to 0} \ln\left((1+x)^{\frac{1}{x}}\right) = \ln\left(\lim_{x \to 0} (1+x)^{\frac{1}{x}}\right) $$
+
+Ponendo:
+$$ y = \frac{1}{x} \rightarrow x = \frac{1}{y} $$
+
+Allora, per $x \to 0$, $y \to \pm\infty$
+$$ \lim_{x \to 0} \frac{\ln(1 + x)}{x} = \ln\left(\lim_{y \to \pm\infty} \left(1+\frac{1}{y}\right)^y\right) $$
+$$ \ln{e} = 1 $$
+
+\ss[Limite notevole 6]
+$$ \lim_{x\to 0} \frac{e^x-1}{x} = 1 $$
+
+In generale:
+$$ \lim_{x\to 0} \frac{a^x-1}{x} = \ln{a} $$
+
+\textit{Dimostrazione:} \\
+Ponendo:
+$$ y = e^x - 1 \rightarrow e^x = y + 1 \rightarrow x = \ln(1 + y) $$
+
+Per $x \to 0$, $y \to 0$
+$$ \lim_{x\to 0} \frac{e^x-1}{x} = \lim_{y\to 0} \frac{y}{\ln(1+y)} $$
+$$ \lim_{y\to 0} \frac{1}{\frac{\ln(1+y)}{y}} = 1 $$
+
+\ss[Limite notevole 7]
+$$ \lim_{x\to 0} \frac{(1+x)^k-1}{x} = k $$
+
+\textit{Dimostrazione:} 
+$$ \lim_{x\to 0} \frac{e^{k\ln(1+x)}-1}{x} \cdot \frac{k\ln(1+x)}{k\ln(1+x)} $$
+
+Applicando i due limiti notevoli precedenti:
+$$ \lim_{x\to 0} \frac{e^{k\ln(1+x)}-1}{k\ln(1+x)} \cdot \frac{\ln(1+x)}{x} \cdot k $$
+$$ = 1 \cdot 1 \cdot k = k $$
+
+\end{document}
