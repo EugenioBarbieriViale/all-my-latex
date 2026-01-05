@@ -1,0 +1,41 @@
+\documentclass[12pt]{article}
+
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{amsmath}
+
+\title{Elettromagnetismo}
+\author{Eugenio Barbieri Viale}
+\date{5 gennaio 2026}
+
+\begin{document}
+\setlength{\parindent}{0pt}
+\maketitle
+
+\section*{Autoinduzione}
+$$ \Phi(\vec{B}) = LI \hspace{1em} $$
+Dove $\Phi(\vec{B})$ è il flusso e $L$ è l'induttanza, in henry (H)
+
+$$ \text{fem} = -L \frac{dI}{dt} $$
+Dove la fem è la forza elettromotrice
+
+$$ L = \mu_0 \mu_r \frac{N^2}{l} A $$
+Dove $L$ è l'induttanza di un solenoide e $\mu_r$ è la permeabilità relativa del materiale
+
+$$ I(t) = \frac{V}{R}(1 - e^{-\frac{t}{L/R}}) $$
+Dove $I$ è la corrente in un circuito $RL$ con tensione continua che si genera chiudendo il circuito. Inoltre la costante di tempo si definisce come $\tau = \frac{L}{R}$
+
+$$ I(t) = \frac{V}{R}e^{-\frac{t}{L/R}} $$
+Dove $I$ è la corrente autoindotta che si genera aprendo il circuito. Si chiama extracorrente di apertura
+
+\section*{Mutua induzione}
+$$ \text{fem}_s = -M \frac{dI_p}{dt} $$
+Dove la fem è la forza elettromotrice che la spira primaria (con corrente variabile $I_p$) genera sulla spira secondaria
+
+\section*{Energia immagazzinata in un campo magnetico}
+$$ U = \frac{1}{2}LI^2 $$
+Dove $U$ è l'energia immagazzinata in un induttore con induttanza $L$
+
+$$ \rho = \frac{U}{\text{vol}} = \frac{1}{2\mu_0 \mu_r }B^2 $$
+Dove $\rho$ è la densità di energia immagazzinata (per unità di volume)
+
+\end{document}
