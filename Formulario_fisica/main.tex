@@ -4,47 +4,14 @@
 \usepackage{amsmath}
 \usepackage{siunitx}
 
-\title{Formulario di fisica}
+\title{Termodinamica, Elettrostatica, Elettromagnetismo}
 \author{Eugenio Barbieri Viale}
+\date{}
 
 \begin{document}
 \setlength{\parindent}{0pt}
 \maketitle
-
-\section{Gravitazione}
-\subsection{Le tre leggi di Keplero}
-\begin{itemize}
-	\item Prima legge di Keplero: i pianeti si muovono attorno al Sole con orbite ellittiche. Il Sole è uno dei due fuochi dell'ellisse
-	\item Seconda legge di Keplero: il raggio vettore di un pianeta spazza aree uguali in tempi uguali (la velocità aereolare è costante)
-	\item Teza legge di Keplero:
-		$$\frac{T^2}{a^3}=\frac{4\pi^2}{GM_s}$$
-\end{itemize}
-
-\subsection{Legge di gravitazione universale}
-$$F = G\frac{m_1m_2}{r^2} \hspace{1em} con \hspace{1em} G=\mathrm{6.673e}{-11}$$
-Confrontando con il peso si ricava la costante:
-$$g=G\frac{M_t}{r_t^2}$$
-
-\subsection{Satelliti}
-Se un satellite si muove di orbita circolare, la sua velocità è:
-$$v = \sqrt{\frac{GM_t}{r}}$$
-
-Un satellite geostazionario ha periodo orbitale uguale al periodo di rotazione della Terra intorno al suo asse. \\
-La sua energia cinetica e potenziale è:
-$$K=\frac{1}{2}mv^2 \hspace{2em} U=-G\frac{m_1m_2}{r}$$
-
-Si nota anche che:
-$$E = -K \hspace{1em} E = \frac{1}{2}U \hspace{1em} U = -2K$$
-
-\subsection{Conservazione}
-Quando un pianeta si muove intorno al Sole si conserva sia l'energia meccanica sia il momento angolare. All'afelio e al perielio:
-$$r_{af}v_{af} = r_{per}v_{per}$$
-
-\subsection{Velocità di fuga}
-$$v_f = \sqrt{\frac{2GM_t}{R_t}}$$
-
-Che raggio deve avere un corpo di massa $M$ perchè sia un buco nero (la luce non riesce a fuggire)?
-$$\sqrt{\frac{2GM}{R}} = c$$
+\tableofcontents
 
 \newpage
 \section{Termodinamica}
@@ -58,99 +25,8 @@ $$ \Delta U = Q - L $$
     \item $Q < 0$: il lavoro è compiuto dall'ambiente sul sistema
 \end{itemize}
 
-\subsection{Trasformazioni termodinamiche di un gas ideale}
-Trasformazione isobara (pressione costante):
-$$ L = p\Delta V $$
-
-\vspace{1em}
-
-Trasformazione isocora (volume costante):
-$$ L = 0 \longrightarrow \Delta U = Q $$
-
-\vspace{1em}
-
-Trasformazione isoterma (temperatura costante):
-$$ L = nRT\ln{\frac{V_f}{V_i}} $$
-$$ \Delta U = 0 \longrightarrow Q = L $$
-
-\vspace{1em}
-
-Trasformazione adiabatica (non viene scambiato calore):
-$$ L = \frac{3}{2}nR(T_i - T_f) $$
-$$ Q = 0 \longrightarrow \Delta U = -L $$
-
-\subsection{Calore specifico molare}
-$$ Q = C_mn\Delta T $$
-dove $C_m$ è il calore specifico molare ($J/(mol \cdot K)$)
-
-\vspace{1em}
-
-Gas monoatomico: 
-\begin{align*}
-    C_p &= \frac{5}{2}R \hspace{1em} \text{pressione costante} \\
-    C_v &= \frac{3}{2}R \hspace{1em} \text{volume costante}
-\end{align*}
-
-\vspace{1em}
-
-Gas biatomico:
-\begin{align*}
-    C_p &= \frac{7}{2}R \hspace{1em} \text{pressione costante} \\
-    C_v &= \frac{5}{2}R \hspace{1em} \text{volume costante}
-\end{align*}
-
-Per un gas perfetto monoatomico:
-$$ \gamma = \frac{5}{3} $$
-Per un gas perfetto biatomico: 
-$$ \gamma = \frac{7}{5} $$
-
-\subsection{Relazioni tra grandezze in trasformazioni adiabatiche}
-\begin{align*}
-    p_i(V_i)^{\gamma} &= p_f(V_f)^{\gamma} \\
-    T_i(V_i)^{\gamma-1} &= T_f(V_f)^{\gamma-1} \\
-    (p_i)^{1-\gamma}(T_i)^{\gamma} &= (p_f)^{1-\gamma}(T_f)^{\gamma}
-\end{align*}
-
-\subsection{Macchine termiche}
-$$ Q_c > 0 \hspace{1em} Q_f < 0 \hspace{1em} L > 0 $$
-Rendimento di una macchina termica:
-$$ \eta = \frac{L}{Q_c} $$
-Dato che
-$$ L = Q_c + Q_f = Q_c - |Q_f| $$
-il rendimento può essere scritto anche:
-$$ \eta = 1 - \frac{|Q_f|}{Q_c} $$
-
-\vspace{1em}
-
-La macchina di Carnot è una macchina termica reversibile. Il suo rendimento:
-$$ \frac{|Q_f|}{Q_c} = \frac{T_f}{T_c} $$
-$$ \eta_{carnot} = 1 - \frac{T_f}{T_c} $$
-Questo è il rendimento massimo che una macchina termica può raggiungere operando tra le due temperature.
-
-\vspace{1em}
-
-Il ciclo di Carnot è composto da:
-\begin{itemize}
-    \item espansione isoterma a temperatura costante $T_c$
-    \item espansione adiabatica: la temperatura diminuisce da $T_c$ a $T_f$
-    \item compressione isoterma a temperatura costante $T_f$
-    \item compressione adiabatica: la temperatura ritorna $T_c$
-\end{itemize}
-
-\subsection{Macchine frigorifere e pompe di calore}
-$$ Q_c < 0 \hspace{1em} Q_f > 0 \hspace{1em} L < 0 $$
-
-Qui vale la relazione:
-$$ |Q_c| = |L| + Q_f $$
-
-Macchina frigorifera:
-$$ COP = \frac{Q_f}{|L|} $$
-
-Pompa a calore:
-$$ COP = \frac{|Q_c|}{|L|} $$
-
 \subsection{Teoria cinetica per un gas ideale}
-$$ n = \frac{N}{N_a} \hspace{1em} n = \frac{m_{totale}}{m_{atomica}} $$
+$$ n = \frac{N}{N_a} = \frac{m_{totale}}{m_{atomica}} $$
 La massa totale è espressa in grammi, mentre quella atomica in dalton ($1u = \num{1.66e-27} kg$)
 
 \vspace{1em}
@@ -161,7 +37,7 @@ con $R = 8.314 \hspace{0.5em}J/(molK)$ la costante universale dei gas
 
 \vspace{1em}
 
-Per un gas monoatomico, dove $\overline{K}$ è l'energia cinetica delle molecole, valgono:
+Per un gas monoatomico, dove $\overline{K}$ è l'energia cinetica media di ogni molecola, valgono le seguenti relazioni:
 $$ pV = \frac{2}{3}N\overline{K} $$
 $$ \overline{K} = \frac{3}{2}kT $$ 
 
@@ -184,11 +60,134 @@ L'energia interna di un gas monoatomico (1) e di un gas biatomico (2):
     U &= \frac{5}{2}nRT \hspace{1em} \text{5 gradi di libertà (vibrazione non considerata)}
 \end{align}
 
+
+\subsection{Calore specifico molare}
+$$ Q = C_mn\Delta T $$
+dove $C_m$ è il calore specifico molare ($J/(mol \cdot K)$)
+
+\vspace{1em}
+
+Gas monoatomico: 
+\begin{align*}
+    C_p &= \frac{5}{2}R \hspace{1em} \text{pressione costante} \\
+    C_v &= \frac{3}{2}R \hspace{1em} \text{volume costante}
+\end{align*}
+
+\vspace{1em}
+
+Gas biatomico:
+\begin{align*}
+    C_p &= \frac{7}{2}R \hspace{1em} \text{pressione costante} \\
+    C_v &= \frac{5}{2}R \hspace{1em} \text{volume costante}
+\end{align*}
+
+Se si definisce $\gamma$ il loro rapporto:
+$$ \gamma = \frac{C_p}{C_v} $$
+allora si ottiene che:
+\begin{align*}
+    \gamma &= \frac{5}{3} \hspace{1em} \text{per un gas perfetto monoatomico} \\
+    \gamma &= \frac{7}{5} \hspace{1em} \text{per un gas perfetto biatomico}
+\end{align*}
+
+\subsection{Trasformazioni termodinamiche di un gas ideale}
+\textbf{Trasformazione isobara}, pressione costante:
+$$ L = p\Delta V $$
+
+\textbf{Trasformazione isocora}, volume costante:
+$$ L = 0 \longrightarrow \Delta U = Q $$
+
+\textbf{Trasformazione isoterma}, temperatura costante:
+$$ L = nRT\ln{\frac{V_f}{V_i}} $$
+$$ \Delta U = 0 \longrightarrow Q = L $$
+
+\textbf{Trasformazione adiabatica}, non viene scambiato calore:
+\begin{align*}
+    L &= C_vn(T_i - T_f) \hspace{1em} \text{se a volume costante} \\
+    L &= C_pn(T_i - T_f) \hspace{1em} \text{se a pressione costante}
+\end{align*}
+$$ Q = 0 \longrightarrow \Delta U = -L $$
+
+\subsection{Relazioni tra grandezze in trasformazioni adiabatiche}
+\textbf{Temperatura costante:}
+$$ p_i(V_i)^{\gamma} = p_f(V_f)^{\gamma} $$
+
+\textbf{Pressione costante:}
+$$ T_i(V_i)^{\gamma-1} = T_f(V_f)^{\gamma-1} $$
+
+\textbf{Volume costante:}
+$$ (p_i)^{1-\gamma}(T_i)^{\gamma} = (p_f)^{1-\gamma}(T_f)^{\gamma} $$
+
+\vspace{1em}
+
+con $\gamma$ il rapporto tra $C_p$ e $C_v$, come definito precedentemente.
+
+\subsection{Secondo principio della termodinamica}
+\textbf{Enunciato di Kelvin-Planck}: \textit{È impossibile realizzare una macchina termica ciclica il cui unico risultato sia la conversione in lavoro di tutto il calore assorbito da un'unica sorgente} 
+
+\vspace{1em}
+
+\textbf{Enunciato di Clausius}: \textit{È impossibile realizzare una trasformazione il cui unico risultato sia quello di trasferire calore da un corpo più freddo a uno più caldo senza l'apporto di lavoro esterno}
+
+\subsection{Macchine termiche}
+$$ Q_c > 0 \hspace{1em} Q_f < 0 \hspace{1em} L > 0 $$
+Rendimento di una macchina termica:
+$$ \eta = \frac{L}{Q_c} $$
+Dato che
+$$ L = Q_c + Q_f = Q_c - |Q_f| $$
+il rendimento può essere scritto anche:
+$$ \eta = 1 - \frac{|Q_f|}{Q_c} $$
+
+\subsection{La macchina di Carnot}
+Una trasformazione è reversibile se \textit{può essere invertita riportando il sistema e l'ambiente nello stato iniziale, senza che questo porti a un cambiamento nel sistema o nell'universo.} 
+
+\vspace{1em}
+
+La macchina di Carnot è una macchina termica reversibile, ovvero opera con trasformazioni reversibili. Si dimostra che:
+$$ \frac{|Q_f|}{Q_c} = \frac{T_f}{T_c} $$
+e ne consegue che:
+$$ \eta_{carnot} = 1 - \frac{T_f}{T_c} $$
+Questo è il rendimento massimo che una macchina termica può raggiungere operando tra le due temperature.
+
+\vspace{1em}
+
+Il \textit{ciclo di Carnot} è composto da:
+\begin{itemize}
+    \item espansione isoterma a temperatura costante $T_c$
+    \item espansione adiabatica: la temperatura diminuisce da $T_c$ a $T_f$
+    \item compressione isoterma a temperatura costante $T_f$
+    \item compressione adiabatica: la temperatura ritorna $T_c$
+\end{itemize}
+
+\subsection{Macchine frigorifere e pompe di calore}
+$$ Q_c < 0 \hspace{1em} Q_f > 0 \hspace{1em} L < 0 $$
+
+Qui vale la relazione:
+$$ |Q_c| = |L| + Q_f $$
+
+Il coefficiente di prestazione è:
+\begin{align*}
+    COP &= \frac{Q_f}{|L|} \hspace{1em} \text{in una macchina frigorifera} \\
+    COP &= \frac{|Q_c|}{|L|} \hspace{1em} \text{in una pompa a calore}
+\end{align*}
+
 \subsection{Entropia}
+\textbf{Riformulazione del secondo principio della termodinamica}: \textit{in un sistema isolato l'entropia è una funzione non decrescente nel tempo}
+$$ \frac{dS}{dt} \ge 0 $$
+
 In una trasformazione reversibile:
 $$ \Delta S = \frac{Q}{T} $$
+
 L'energia dell'universo non cambia in processi reversibili, mentre aumenta sempre in processi irreversibili. Questi ultimi causano un degrado dell'energia, una cui parte non è più utilizzabile. Il lavoro inutilizzato:
 $$ L_{inut} = T_f \Delta S_{univ} $$
+
+L'entropia di un macrostato $m$, dove $\Omega$ è il numero di microstati che corrispondono al macrostato e $k$ è uguale alla costante di Boltzmann:
+$$ S_m = k\ln{\Omega_m} $$
+da cui, la variazione di entropia dal macrostato $a$ al macrostato $b$:
+$$ \Delta S_{a\rightarrow b} = k \ln{\frac{\Omega_b}{\Omega_a}} $$
+
+In un sistema ordinato, in cui un macrostato corrisponde a pochi microstati, si può dimostrare che
+$$ \Omega \approx E^N $$
+dove $\Omega$ è il numero degli stati disponibili, $E$ è l'energia immagazzinata dal sistema ed $N$ è il numero di molecole.
 
 \newpage
 \section{Onde}
@@ -220,7 +219,7 @@ $$ \text{dove} \hspace{1em} \omega = \frac{2\pi}{T} \hspace{1em} \text{e} \hspac
 \end{itemize}
 
 \subsection{Teorema di Fourier}
-\textbf{enunciato}: \textit{Qualsiasi funzione periodica con frequenza $f$ può essere scritta come somma di funzioni sinusoidali con frequenze che sono multipli di $f$}
+\textbf{Enunciato}: \textit{Qualsiasi funzione periodica con frequenza $f$ può essere scritta come somma di funzioni sinusoidali con frequenze che sono multipli di $f$}
 
 \subsection{Il suono}
 \subsubsection{L'ampiezza massima}
@@ -254,7 +253,7 @@ $$ I = 2\pi^2 f^2 dvA^2 $$
 $$ \beta = 10 \log\frac{I}{I_0} $$
 con $I_0$ la soglia minima di intensità sonora udibile
 
-\subsubsection{Effetto Doppler}
+\subsection{Effetto Doppler}
 \begin{align*}
     f_r &= f_s \frac{1}{1 - \frac{v_s}{v}} \rightarrow \text{sorgente si avvicina a ricevitore fermo ($f_r$ \textit{aumenta)}} \\
     f_r &= f_s \frac{1}{1 + \frac{v_s}{v}} \rightarrow \text{sorgente si allontana da ricevitore fermo($f_r$ \textit{diminuisce)}} \\
@@ -273,11 +272,36 @@ $$ \Delta x = k\lambda \hspace{1em} k \in Z$$
 Si ha invece interferenza distruttiva nei punti di ampiezza nulla, cioè quando:
 $$ \Delta x = (k+\frac{1}{2})\lambda \hspace{1em} k \in Z $$
 
-$\Delta x = x_1-x_2$ è la differenza di cammino, dove $x_1$ e $x_2$ sono le distanze del punto $P$ dalle sorgenti $S_1$ e $S_2$.
+$\Delta x = x_1-x_2$ è la differenza di cammino, dove $x_1$ e $x_2$ sono le distanze del punto $P$ dalle sorgenti (luminose o sonore) $S_1$ e $S_2$.
+
+\subsection{La luce come onda}
+Se $v$ è la velocità di propagazione, $\lambda$ la lunghezza d'onda e $f$ la frequenza:
+$$ v = \lambda f $$
+e se il raggio passa da un materiale all'altro, con indici di rifrazione $n$ diversi:
+$$ \frac{n_1}{\lambda_1} = \frac{n_2}{\lambda_2} $$
+
+\subsubsection{L'esperimento di Young}
+Nei punti di interferenza costruttiva ci sono frange chiare che si trovano ad ampiezze di $\theta$ tali che:
+$$ \sin{\theta} = k\frac{\lambda}{d}, \hspace{1em} k \in N$$
+con $d$ la distanza tra le due fenditure.
+
+\vspace{1em}
+
+Nei punti di interferenza distruttiva ci sono frange scure che si trovano ad ampiezze di $\theta$ tali che:
+$$ \sin{\theta} = (k + \frac{1}{2})\frac{\lambda}{d}, \hspace{1em} k \in N$$
+
+Da questa relazione, ponendo $k = 1$ e approssimando $\sin{\theta} \approx \tan{\theta}$ per $\theta \rightarrow 0 $, si ottiene che:
+$$ \lambda = \frac{yd}{L} $$
+dove $y$ è la distanza tra la frangia chiara di ordine 0 e di ordine 1, mentre $L$ è la distanza tra lo schermo e la doppia fenditura.
 
 \subsection{Diffrazione}
 $$ \sin{\theta} = \frac{\lambda}{D} $$
-dove $\theta$ è l'angolo di diffrazione, $D$ è la larghezza della fenditura attraverso la quale il suono passa
+dove $\theta$ è l'angolo di diffrazione, $D$ è la larghezza della fenditura attraverso la quale il suono o la luce passano.
+
+\vspace{1em}
+
+Per la luce, nel caso di un'unica fenditura, le frange di diffrazione scure si trovano ad ampiezze di $\theta$ tali che:
+$$ \sin{\theta} = k\frac{\lambda}{D}, \hspace{1em} k \in N $$
 
 \subsection{Battimenti}
 $$ f_{bat} = |f_1 - f_2| $$
@@ -337,6 +361,8 @@ $$ |\vec{E}| = \frac{\lambda}{2\pi\varepsilon_0} \frac{1}{r} $$
 \subsection{Flusso}
 Per definizione:
 $$ \Phi_s(\vec{E}) = \vec{E} \cdot \vec{S} = |\vec{E}||\vec{S}|\cos{\varphi} $$
+
+\vspace{1em}
 
 Teorema di Gauss: \textit{Il flusso del campo elettrico attraverso una superficie gaussiana è uguale al rapporto tra la carica totale racchiusa nella superficie e la costante dielettrica}
 $$ \Phi_s(\vec{E}) = \frac{Q_{racchiusa}}{\varepsilon_0} $$
@@ -405,8 +431,8 @@ $$ C = \frac{\varepsilon_0 \varepsilon_r A}{d} $$
 dove $\varepsilon_r$ è la costante dielettrica relativa del materiale tra le armature, \textbf{non} delle armature
 
 \subsection{Energia immagazzinata in un campo elettrico}
-L'energia potenziale elettrica immagazzinata in un condensatore con differenza di potenziale $\Delta V$ e carica $q$:
-$$ U = \frac{1}{2}q \Delta V $$
+L'energia potenziale elettrica immagazzinata in un condensatore con differenza di potenziale $V$ e carica $q$:
+$$ U = \frac{1}{2}qV = \frac{1}{2}CV^2 = \frac{1}{2}\frac{q^2}{C} $$
 
 In funzione del campo:
 $$ U = \frac{1}{2} \varepsilon_0 \varepsilon_r AdE^2 $$
@@ -418,27 +444,27 @@ $$ \delta_{energia} = \frac{1}{2} \varepsilon_0 \varepsilon_r E^2 $$
 \section{Elettromagnetismo}
 \subsection{Autoinduzione}
 $$ \Phi(\vec{B}) = LI \hspace{1em} $$
-Dove $\Phi(\vec{B})$ è il flusso e $L$ è l'induttanza, in henry (H)
+Dove $\Phi(\vec{B})$ è il flusso e $L$ è l'induttanza, in Henry ($H$).
 
 $$ \text{fem} = -L \frac{dI}{dt} $$
-Dove la fem è la forza elettromotrice
+Dove la fem è la forza elettromotrice.
 
 $$ L = \mu_0 \mu_r \frac{N^2}{l} A $$
-Dove $L$ è l'induttanza di un solenoide e $\mu_r$ è la permeabilità relativa del materiale
+Dove $L$ è l'induttanza di un solenoide e $\mu_r$ è la permeabilità relativa del materiale.
 
 $$ I(t) = \frac{V}{R}(1 - e^{-\frac{t}{L/R}}) $$
-Dove $I$ è la corrente in un circuito $RL$ con tensione continua che si genera chiudendo il circuito. Inoltre la costante di tempo si definisce come $\tau = \frac{L}{R}$
+Dove $I$ è la corrente in un circuito $RL$ con tensione continua che si genera chiudendo il circuito. Inoltre la costante di tempo si definisce come $\tau = \frac{L}{R}$.
 
 $$ I(t) = \frac{V}{R}e^{-\frac{t}{L/R}} $$
-Dove $I$ è la corrente autoindotta che si genera aprendo il circuito. Si chiama extracorrente di apertura
+Dove $I$ è la corrente autoindotta che si genera aprendo il circuito. Si chiama extracorrente di apertura.
 
 \subsection{Mutua induzione}
 $$ \text{fem}_s = -M \frac{dI_p}{dt} $$
-Dove la fem è la forza elettromotrice che la spira primaria (con corrente variabile $I_p$) genera sulla spira secondaria
+Dove la fem è la forza elettromotrice che la spira primaria (con corrente variabile $I_p$) genera sulla spira secondaria. Anche $M$ si esprime in Henry ($H$).
 
 \subsection{Energia immagazzinata in un campo magnetico}
 $$ U = \frac{1}{2}LI^2 $$
-Dove $U$ è l'energia immagazzinata in un induttore con induttanza $L$
+Dove $U$ è l'energia immagazzinata in un induttore con induttanza $L$.
 
 $$ \delta_{energia} = \frac{U}{\text{vol}} = \frac{1}{2\mu_0 \mu_r }B^2 $$
 \end{document}
