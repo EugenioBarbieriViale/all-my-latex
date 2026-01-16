@@ -4,8 +4,8 @@
 \usepackage{amsmath}
 \usepackage{siunitx}
 
-\title{Termodinamica, Elettrostatica, Elettromagnetismo}
-\author{Eugenio Barbieri Viale}
+\title{Termodinamica, Onde, Elettrostatica, Circuiti, Elettromagnetismo}
+\author{Eugenio Barbieri Viale, Jacopo Franzoso}
 \date{}
 
 \begin{document}
@@ -22,12 +22,14 @@ $$ \Delta U = Q - L $$
     \item $Q > 0$: il sistema assorbe calore
     \item $Q < 0$: il sistema cede calore
     \item $L > 0$: il sistema compie lavoro 
-    \item $Q < 0$: il lavoro è compiuto dall'ambiente sul sistema
+    \item $L < 0$: il lavoro è compiuto dall'ambiente sul sistema
 \end{itemize}
 
 \subsection{Teoria cinetica per un gas ideale}
-$$ n = \frac{N}{N_a} = \frac{m_{totale}}{m_{atomica}} $$
-La massa totale è espressa in grammi, mentre quella atomica in dalton ($1u = \num{1.66e-27} kg$)
+Il numero di moli $n$ si esprime come:
+$$ n = \frac{N}{N_a} = \frac{m_{totale}}{m_{molecolare}} $$
+in cui la massa molecolare è data dalla somma dei numeri di massa $Z$ degli atomi che compongono la molecola. \\
+La massa totale è espressa in grammi, mentre quella molecolare in dalton ($1u = \num{1.66e-27} kg$)
 
 \vspace{1em}
 
@@ -175,12 +177,15 @@ Il coefficiente di prestazione è:
 $$ \frac{dS}{dt} \ge 0 $$
 
 In una trasformazione reversibile:
-$$ \Delta S = \frac{Q}{T} $$
+$$ \Delta S_{a\rightarrow b} = S_b - S_a = \int_{a}^{b} \frac{dQ}{T} $$
 
-L'energia dell'universo non cambia in processi reversibili, mentre aumenta sempre in processi irreversibili. Questi ultimi causano un degrado dell'energia, una cui parte non è più utilizzabile. Il lavoro inutilizzato:
-$$ L_{inut} = T_f \Delta S_{univ} $$
+L'entropia dell'universo non cambia in processi reversibili, mentre aumenta sempre in processi irreversibili. \\
+Questi ultimi causano un degrado dell'energia, una cui parte non è più utilizzabile. Il lavoro inutilizzato:
+$$ L_{inut} = T_f \Delta S_{universo} $$
+ponendo:
+$$ \Delta S_{universo} = \Delta S_{ambiente} + \Delta S_{sistema} $$
 
-L'entropia di un macrostato $m$, dove $\Omega$ è il numero di microstati che corrispondono al macrostato e $k$ è uguale alla costante di Boltzmann:
+L'entropia di un macrostato $m$, dove $\Omega$ è il numero di microstati che corrispondono al macrostato e $k$ è la costante di Boltzmann:
 $$ S_m = k\ln{\Omega_m} $$
 da cui, la variazione di entropia dal macrostato $a$ al macrostato $b$:
 $$ \Delta S_{a\rightarrow b} = k \ln{\frac{\Omega_b}{\Omega_a}} $$
@@ -207,7 +212,7 @@ Un'onda è una perturbazione che si propaga nello spazio e trasporta energia sen
     T &= \text{periodo} = \text{$\Delta t$ in cui viene compiuta un'oscillazione completa} \\
     f &= \text{frequenza} = \frac{1}{T} \\
     v &= \text{velocità di propagazione} = \frac{\lambda}{T} = \lambda f \\
-    v &= \sqrt{\frac{F_t}{\mu}} \hspace{1em} \text{con} \hspace{1em} \mu = \frac{m}{L} = \text{densità lineare}
+    v &= \sqrt{\frac{F_t}{\mu}} \hspace{1em} \text{con} \hspace{1em} \mu = \frac{m}{L} = \text{densità lineare e $F_t$ la tensione della corda}
 \end{align*}
 
 \subsection{Descrizione matematica di un'onda}
@@ -222,9 +227,10 @@ $$ \text{dove} \hspace{1em} \omega = \frac{2\pi}{T} \hspace{1em} \text{e} \hspac
 \textbf{Enunciato}: \textit{Qualsiasi funzione periodica con frequenza $f$ può essere scritta come somma di funzioni sinusoidali con frequenze che sono multipli di $f$}
 
 \subsection{Il suono}
-\subsubsection{L'ampiezza massima}
-$$ \Delta p_{max} = 2\pi fdvA $$
-in cui $f$ è la frequenza, $d$ è la densità del mezzo, $v$ è la velocità di propagazione dell'onda, $A$ è lo spostamento massimo di una molecola dalla posizione di equilibrio
+\subsubsection{La variazione massima di pressione}
+La differenza di pressione massima tra una zona di compressione e la pressione atmosferica normale è data dalla relazione:
+$$ \Delta p_{max} = 2\pi f\rho vA $$
+in cui $f$ è la frequenza, $\rho$ è la densità del mezzo, $v$ è la velocità di propagazione dell'onda e $A$ è lo spostamento massimo di una molecola dalla posizione di equilibrio.
 
 \subsubsection{Velocità del suono in un gas}
 $$ v_{suono} = \sqrt{\gamma k_b \frac{T}{m}} $$
@@ -236,13 +242,13 @@ $$ \text{dove} \hspace{1em} \gamma = \frac{c_p}{c_v} $$
 \end{itemize}
 
 \subsubsection{Intensità del suono}
-$$ I = \frac{P}{A} = \left[\frac{W}{m^2}\right] $$
-dove $P$ è la potenza sonora che attraversa perpendicolarmente una data superficie, $A$ è l'area della superficie
+$$ I = \frac{P}{A} $$
+dove $P$ è la potenza sonora che attraversa perpendicolarmente una data superficie, $A$ è l'area della superficie.
 
 \vspace{1em}
 
 $$ I = \frac{P}{4\pi r^2} $$
-se la sorgente emette onde sonore in maniera isotropa vale questa relazione. La superficie $A$ è quella di una sfera e $r$ è il raggio di essa, ovvero la distanza dalla sorgente
+se la sorgente emette onde sonore in maniera isotropa vale questa relazione. La superficie $A$ è quella di una sfera e $r$ è il raggio di essa, ovvero la distanza dalla sorgente.
 
 \vspace{1em}
 
@@ -251,26 +257,26 @@ $$ I = 2\pi^2 f^2 dvA^2 $$
 
 \subsubsection{Livello di intensità sonora}
 $$ \beta = 10 \log\frac{I}{I_0} $$
-con $I_0$ la soglia minima di intensità sonora udibile
+con $I_0$ la soglia minima di intensità sonora udibile.
 
 \subsection{Effetto Doppler}
 \begin{align*}
-    f_r &= f_s \frac{1}{1 - \frac{v_s}{v}} \rightarrow \text{sorgente si avvicina a ricevitore fermo ($f_r$ \textit{aumenta)}} \\
-    f_r &= f_s \frac{1}{1 + \frac{v_s}{v}} \rightarrow \text{sorgente si allontana da ricevitore fermo($f_r$ \textit{diminuisce)}} \\
-    f_r &= f_s(1 + \frac{v_r}{v}) \rightarrow \text{ricevitore si avvicina a sorgente ferma ($f_r$ \textit{aumenta)}} \\
-    f_r &= f_s(1 - \frac{v_r}{v}) \rightarrow \text{ricevitore si allontana da sorgente ferma ($f_r$ \textit{diminuisce)}}
+f_r &= f_s \frac{1}{1 - \frac{v_s}{v}} \rightarrow \text{sorgente si avvicina a ricevitore fermo ($f_r$ \textit{aumenta)}} \\
+f_r &= f_s \frac{1}{1 + \frac{v_s}{v}} \rightarrow \text{sorgente si allontana da ricevitore fermo($f_r$ \textit{diminuisce)}} \\
+f_r &= f_s(1 + \frac{v_r}{v}) \rightarrow \text{ricevitore si avvicina a sorgente ferma ($f_r$ \textit{aumenta)}} \\
+f_r &= f_s(1 - \frac{v_r}{v}) \rightarrow \text{ricevitore si allontana da sorgente ferma ($f_r$ \textit{diminuisce)}}
 \end{align*}
 Caso generale:
-$$ f_r = f_s\left(\frac{1 \pm \frac{v_r}{v}}{1 \pm \frac{v_s}{v}}\right) $$
+$$ f_r = f_s\left(\frac{1 \pm \frac{v_r}{v}}{1 \mp \frac{v_s}{v}}\right) $$
 
 \subsection{Interferenza}
 Si ha interferenza costruttiva nei punti di ampiezza massima, cioè quando:
-$$ \Delta x = k\lambda \hspace{1em} k \in Z$$
+$$ \Delta x = k\lambda, \hspace{1em} k \in Z $$
 
 \vspace{1em}
 
 Si ha invece interferenza distruttiva nei punti di ampiezza nulla, cioè quando:
-$$ \Delta x = (k+\frac{1}{2})\lambda \hspace{1em} k \in Z $$
+$$ \Delta x = (k+\frac{1}{2})\lambda, \hspace{1em} k \in Z $$
 
 $\Delta x = x_1-x_2$ è la differenza di cammino, dove $x_1$ e $x_2$ sono le distanze del punto $P$ dalle sorgenti (luminose o sonore) $S_1$ e $S_2$.
 
@@ -279,18 +285,19 @@ Se $v$ è la velocità di propagazione, $\lambda$ la lunghezza d'onda e $f$ la f
 $$ v = \lambda f $$
 e se il raggio passa da un materiale all'altro, con indici di rifrazione $n$ diversi:
 $$ \frac{n_1}{\lambda_1} = \frac{n_2}{\lambda_2} $$
+dato che la frequenza rimane invariata quando un'onda cambia mezzo.
 
 \subsubsection{L'esperimento di Young}
 Nei punti di interferenza costruttiva ci sono frange chiare che si trovano ad ampiezze di $\theta$ tali che:
-$$ \sin{\theta} = k\frac{\lambda}{d}, \hspace{1em} k \in N$$
+$$ \sin{\theta} = k\frac{\lambda}{d}, \hspace{1em} k \in Z $$
 con $d$ la distanza tra le due fenditure.
 
 \vspace{1em}
 
 Nei punti di interferenza distruttiva ci sono frange scure che si trovano ad ampiezze di $\theta$ tali che:
-$$ \sin{\theta} = (k + \frac{1}{2})\frac{\lambda}{d}, \hspace{1em} k \in N$$
+$$ \sin{\theta} = (k + \frac{1}{2})\frac{\lambda}{d}, \hspace{1em} k \in Z $$
 
-Da questa relazione, ponendo $k = 1$ e approssimando $\sin{\theta} \approx \tan{\theta}$ per $\theta \rightarrow 0 $, si ottiene che:
+Da questa relazione, ponendo $k = \pm1$ e approssimando $\sin{\theta} \approx \tan{\theta}$ per $\theta \rightarrow 0 $, si ottiene che:
 $$ \lambda = \frac{yd}{L} $$
 dove $y$ è la distanza tra la frangia chiara di ordine 0 e di ordine 1, mentre $L$ è la distanza tra lo schermo e la doppia fenditura.
 
@@ -301,9 +308,14 @@ dove $\theta$ è l'angolo di diffrazione, $D$ è la larghezza della fenditura at
 \vspace{1em}
 
 Per la luce, nel caso di un'unica fenditura, le frange di diffrazione scure si trovano ad ampiezze di $\theta$ tali che:
-$$ \sin{\theta} = k\frac{\lambda}{D}, \hspace{1em} k \in N $$
+$$ \sin{\theta} = k\frac{\lambda}{D}, \hspace{1em} k \in Z $$
+
+\subsection{Reticolo di diffrazione}
+Dato un reticolo di diffrazione con passo $d$, i punti chiari si trovano ad angoli $\theta$ tali per cui:
+$$ \sin{\theta} = k\frac{\lambda}{d}, \hspace{1em} k \in Z $$
 
 \subsection{Battimenti}
+Quando due onde simili si sovrappongono, si verifica una variazione periodica dell'ampiezza dell'onda risultante, che ha frequenza:
 $$ f_{bat} = |f_1 - f_2| $$
 
 \subsection{Onde stazionarie}
@@ -358,14 +370,16 @@ $$ |\vec{E}| = \frac{\lambda}{2\pi\varepsilon_0} \frac{1}{r} $$
     \end{cases}
 \end{equation}
 
-\subsection{Flusso}
-Per definizione:
-$$ \Phi_s(\vec{E}) = \vec{E} \cdot \vec{S} = |\vec{E}||\vec{S}|\cos{\varphi} $$
+\subsection{Il flusso elettrico}
+Il flusso elettrico attraverso una superficie $S$ si definisce come il prodotto scalare tra il campo e il vettore superficie (cha ha intensità pari alla superficie, è perpendicolare ad essa, ed è rivolto verso l'esterno se è chiusa):
+$$ \Phi_S(\vec{E}) = \vec{E} \cdot \vec{S} = |\vec{E}||\vec{S}|\cos{\varphi} $$
 
-\vspace{1em}
+Se però il campo è variabile e la superficie non è piana, il flusso è pari all'integrale di superficie:
+$$ \Phi_S(\vec{E}) = \int_S \vec{E} \cdot dS $$
 
-Teorema di Gauss: \textit{Il flusso del campo elettrico attraverso una superficie gaussiana è uguale al rapporto tra la carica totale racchiusa nella superficie e la costante dielettrica}
-$$ \Phi_s(\vec{E}) = \frac{Q_{racchiusa}}{\varepsilon_0} $$
+\subsection{Il teorema di Gauss}
+\textit{Il flusso del campo elettrico attraverso una superficie gaussiana (chiusa) è uguale al rapporto tra la carica totale racchiusa nella superficie e la costante dielettrica}
+$$ \Phi_S(\vec{E}) = \frac{Q_{racchiusa}}{\varepsilon_0} $$
 
 \subsection{Energia potenziale}
 La forza di coulomb è conservativa, e l'energia potenziale di un sistema di due cariche puntiformi è:
@@ -416,7 +430,10 @@ $$ E_s = -\frac{dV}{ds} $$
 dove $E_s$ è la componente del campo elettrico sul vettore spostamento $d\vec{s}$
 
 \subsection{Circuitazione}
-La circuitazione del campo elettrico lungo una curva $\gamma$:
+La circuitazione del campo elettrico lungo una curva $l$ si definisce come l'integrale curvilineo di $\vec{E}$ esteso ad $l$:
+$$ \Gamma_{l}(\vec{E}) = \int_{l} \vec{E}\cdot dl$$
+
+Essendo il campo elettrico conservativo, la circuitazione lungo una curva chiusa $\gamma$ è nullo:
 $$ \Gamma_{\gamma}(\vec{E}) = 0 $$
 
 \subsection{Capacità}
@@ -431,8 +448,11 @@ $$ C = \frac{\varepsilon_0 \varepsilon_r A}{d} $$
 dove $\varepsilon_r$ è la costante dielettrica relativa del materiale tra le armature, \textbf{non} delle armature
 
 \subsection{Energia immagazzinata in un campo elettrico}
-L'energia potenziale elettrica immagazzinata in un condensatore con differenza di potenziale $V$ e carica $q$:
-$$ U = \frac{1}{2}qV = \frac{1}{2}CV^2 = \frac{1}{2}\frac{q^2}{C} $$
+L'energia potenziale elettrica immagazzinata in un condensatore con capacità $C$ si può calcolare come l'integrale dei lavori elementari che si devono compiere per spostare una carica infinitesimale $dq$, quando nel condensatore è già presente una carica $q$ e $Q$ è la carica finale:
+$$ L = \int_0^Q \frac{q}{C} dq = \frac{1}{2}\frac{Q^2}{C} $$
+
+Modi alternativi per scrivere l'energia, usando relazioni note:
+$$ U = \frac{1}{2}qV = \frac{1}{2}CV^2 $$
 
 In funzione del campo:
 $$ U = \frac{1}{2} \varepsilon_0 \varepsilon_r AdE^2 $$
@@ -441,30 +461,200 @@ La densità di energia:
 $$ \delta_{energia} = \frac{1}{2} \varepsilon_0 \varepsilon_r E^2 $$
 
 \newpage
+\section{Circuiti elettrici}
+\subsection{La corrente}
+Si definisce la corrente come:
+$$ I = \frac{dQ}{dt} $$
+
+Mentre in un conduttore, la corrente si può scrivere in funzione della densità di cariche libere $\delta$, il valore di ogni carica $q$ , la sezione del conduttore $S$ e la velocità di deriva $v_d$:
+$$I = \delta qSv_d$$
+
+\subsection{La prima legge di Ohm}
+$$ V = RI $$
+dove $R$ è la resistenza elettrica del conduttore
+
+\subsection{La seconda legge di Ohm}
+$$ R = \rho \frac{L}{S} $$
+dove $\rho$ è la resistività del conduttore di lunghezza $L$ e sezione $R$.
+
+\vspace{1em}
+
+La resistività (e quindi la resistenza) dipendono dalla temperatura secondo la relazione:
+$$ \rho = \rho_0 (1 + \alpha(T-T_0)) $$
+
+\subsection{La potenze elettrica}
+La potenza elettrica sviluppata da una corrente $I$ che scorre in un circuito con differenza di potenziale $V$ e presenta resistenza $R$ è:
+$$ P = IV = RI^2 = \frac{V^2}{R} $$
+
+\subsection{Resistenza equivalente}
+\subsubsection{Connessione in serie}
+$$ R_{eq} = \sum_{i=1}^{i=n} R_i $$
+
+\subsubsection{Connessione in parallelo}
+$$ \frac{1}{R_{eq}} = \sum_{i=1}^{i=n} \frac{1}{R_i} $$
+
+\subsection{Capacità equivalente}
+\subsubsection{Connessione in serie}
+$$ \frac{1}{C_{eq}} = \sum_{i=1}^{i=n} \frac{1}{C_i} $$
+
+\subsubsection{Connessione in parallelo}
+$$ C_{eq} = \sum_{i=1}^{i=n} C_i $$
+
+\subsection{La prima legge di Kirchhoff}
+\textit{La corrente totale entrante in un nodo è uguale alla corrente totale uscente dal nodo.}
+
+\subsection{La seconda legge di Kirchhoff}
+\textit{In un circuito chiuso la somma algebrica delle differenze di potenziale è uguale a zero}, in accordo con la conservatività del campo elettrico.
+
+\subsection{I circuiti $RC$}
+\subsubsection{La carica di un condensatore}
+Durante questo proecesso, la carica $q$:
+$$ q(t) = q_o(1-e^{\frac{-t}{\tau}}) \hspace{1em} \text{con} \hspace{1em} \tau = RC $$
+
+Sempre durante la carica, l'intensità di corrente diminuisce come il condensatore si satura:
+$$ I(t) = \frac{V_0}{R}e^{\frac{-t}{\tau}} $$
+dove $V_0$ è la differenza di potenziale del generatore di tensione.
+
+\subsubsection{La scarica di un condensatore}
+$$ q(t) = q_0 e^{\frac{-t}{\tau}} $$
+
+Mentre la corrente:
+$$ I(t) = \frac{V_0}{R}e^{\frac{-t}{\tau}} $$
+
+\newpage
 \section{Elettromagnetismo}
+
+\subsection{La forza di Lorentz}
+Una carica che si muove in un campo magnetico $\vec{B}$, subisce una forza tale che:
+$$ \vec{F} = q\vec{v}\times \vec{B} $$
+$$ F = qvB\sin{\theta} $$
+
+Nel caso di un filo immerso in un campo magnetico in cui scorre corrente, si può facilmente dimostrare che la forza sul filo è pari a:
+$$ \vec{F} = IL\hat{l}\times \vec{B} $$
+dove il versore $\hat{l}$ è diretto parallelamente al filo e rivolto come la corrente.
+
+\subsection{Momento torcente}
+Il momento magnetico si definisce come:
+$$ \vec{\mu_m} = I\vec{S} $$
+dove $\vec{S}$ è il vettore superficie, con intensità pari alla superficie della spira e diretto perpendicolarmente ad essa.
+
+\vspace{1em}
+
+Il momento torcente di una bobina con $N$ spire si può quindi scrivere come:
+$$ \vec{\tau} = N \vec{\mu_m} \times \vec{B} $$
+
+\subsection{La legge di Biot-Savart}
+L'intensità del campo magnetico generato da un filo carico a una distanza $r$ da esso è pari a:
+$$ B = \frac{\mu_0}{2\pi}\frac{I}{r} $$
+dove $\mu_0 = 4\pi \cdot 10^{-7} Tm/A$ è la costante di permeabilità magnetica del vuoto.
+
+\vspace{1em}
+
+Secondo questa legge, due fili paralleli in cui passa corrente risento di una forza di intensità:
+$$ F = \frac{\mu_0}{2\pi}\frac{I_1I_2}{d}L $$
+dove $d$ è la loro distanza e $L$ la loro lunghezza. \\
+Se le correnti sono opposte, i fili si respingono. Al contrario, se sono concordi essi si attraggono.
+
+\subsection{Campo magnetico in una bobina}
+$$ B = N \frac{\mu_0I}{2R} $$
+Questo si verifica solo nel centro della bobina, dove il campo magnetico è parallelo all'asse della bobina.
+
+\subsection{Campo magnetico in un solenoide}
+$$ B = \mu_0 \frac{N}{L} I $$
+Vale all'interno del solenoide lontano dalle estremità, mentre all'esterno $B$ è praticamente nullo.
+
+\subsection{Il flusso magnetico}
+Il flusso magnetico attraverso una superficie $S$ si definisce, come per il flusso elettrico, con un integrale di superifcie:
+$$ \Phi_S(\vec{B}) = \int_S \vec{B} \cdot dS $$
+
+Il flusso magnetico attraverso una qualsiasi superficie gaussiana (chiusa):
+$$ \Phi_S(\vec{B}) = 0 $$
+Questo deriva dal fatto che non esistono monopoli magnetici.
+
+\subsection{Il teorema di Ampere}
+Una corrente è concatenata a una curva \textit{se attraversa ogni superficie che ha per contorno quella curva.} \\
+\textit{La circuitazione del campo magnetico lungo una curva chiusa $\partial L$ è uguale al prodotto tra la costante di permeabilità magnetica nel vuoto e la somma delle correnti concatenate alla curva:}
+$$ \Gamma_s(\vec{B}) = \oint_{\partial L} \vec{B} \cdot dr = \mu_0\sum_i I_i $$
+
+\subsection{La legge di Faraday-Neumann-Lenz}
+La fem indotta da una variazione di flusso nel tempo:
+$$ \text{fem} = -\frac{d\Phi_S(\vec{B})}{dt} $$
+Il segno meno indica che la corrente indotta ha un verso tale da generare un campo magnetico indotto che si oppone alla variazione di flusso. \\
+Perciò, $\vec{B_{ind}}$ ha:
+\begin{align*}
+    \text{verso opposto di $\vec{B}$ se} \hspace{1em} \rightarrow \hspace{1em} d\Phi_S(\vec{B}) > 0 \\
+    \text{stesso verso di $\vec{B}$ se} \hspace{1em} \rightarrow \hspace{1em} d\Phi_S(\vec{B}) < 0
+\end{align*}
+La presenza del segno meno è dovuta alla legge di conservazione dell'energia.
+
 \subsection{Autoinduzione}
+Essendo il flusso direttamente proporzionale al campo magnetico, e il campo magnetico alla corrente, per proprietà transitiva:
 $$ \Phi(\vec{B}) = LI \hspace{1em} $$
-Dove $\Phi(\vec{B})$ è il flusso e $L$ è l'induttanza, in Henry ($H$).
+in cui si introduce la costante $L$, chiamata induttanza, con unità di misura Henry ($H$).
 
+Per la legge di Faraday-Neumann:
 $$ \text{fem} = -L \frac{dI}{dt} $$
-Dove la fem è la forza elettromotrice.
 
+L'induttanza dipende dalla geometria del solenoide. Se $\mu_r$ è la permeabilità relativa del materiale:
 $$ L = \mu_0 \mu_r \frac{N^2}{l} A $$
-Dove $L$ è l'induttanza di un solenoide e $\mu_r$ è la permeabilità relativa del materiale.
 
+\subsection{Circuito $RL$}
+Un generatore di corrente variabile in un circuito con una resistenza e un induttore, porta a una variazione di flusso nell'induttore e quindi a una corrente autoindotta (per la legge di Faraday-Neumann). \\
+La corrente autoindotta si oppone alla variazione della corrente del circuito (per la legge di Lenz).
+
+\vspace{1em}
+
+La corrente che si genera chiudendo il circuito, prima di raggiungere il suo valore di regime $I_r = V/R$, varia nel tempo secondo la legge:
 $$ I(t) = \frac{V}{R}(1 - e^{-\frac{t}{L/R}}) $$
-Dove $I$ è la corrente in un circuito $RL$ con tensione continua che si genera chiudendo il circuito. Inoltre la costante di tempo si definisce come $\tau = \frac{L}{R}$.
+Si definisce, come per i circuiti $RC$, la costante di tempo $\tau = \frac{L}{R}$.
 
+\vspace{1em}
+
+Quando si apre il circuito, si genera una corrente autoindotta chiamata extracorrente di apertura:
 $$ I(t) = \frac{V}{R}e^{-\frac{t}{L/R}} $$
-Dove $I$ è la corrente autoindotta che si genera aprendo il circuito. Si chiama extracorrente di apertura.
 
 \subsection{Mutua induzione}
 $$ \text{fem}_s = -M \frac{dI_p}{dt} $$
 Dove la fem è la forza elettromotrice che la spira primaria (con corrente variabile $I_p$) genera sulla spira secondaria. Anche $M$ si esprime in Henry ($H$).
 
 \subsection{Energia immagazzinata in un campo magnetico}
-$$ U = \frac{1}{2}LI^2 $$
+$$ U = \int_0^I Li \cdot di = \frac{1}{2}LI^2 $$
 Dove $U$ è l'energia immagazzinata in un induttore con induttanza $L$.
 
+\vspace{1em}
+
+La densità di energia per unità di volume è:
 $$ \delta_{energia} = \frac{U}{\text{vol}} = \frac{1}{2\mu_0 \mu_r }B^2 $$
+
+\subsection{La corrente alternata}
+In un alternatore, la forza elettromotrice varia nel tempo seguendo la legge:
+$$ fem(t) = fem_0\sin(2\pi ft) $$
+dove $f$ è la frequenza. \\
+Il valore massimo della fem indotta è $fem_0$, che, in funzione del numero di spire dell'alternatore $N$, della superifcie $S$ e del campo magnetico $B$ è pari a:
+$$ fem_0 = 2\pi fNSB $$
+
+La corrente si può quindi scrivere come:
+$$ I(t) = I_0 \sin(2\pi ft) $$
+
+\subsubsection{Circuito resistivo}
+La tensione e la corrente sono in fase, per cui la potenza si può scrivere come:
+$$ P(t) = I(t)fem(t) = I_0fem_0\sin^2{(2\pi ft)} $$
+mentre la potenza media:
+$$ \overline{P} = \frac{1}{T}\int_0^T P(t)dt = \frac{1}{2}I_0fem_0 $$
+Si definiscono quindi i valori efficaci della corrente e della fem come:
+$$ I_{eff} = \frac{I_0}{\sqrt{2}} \hspace{1em} \text{e} \hspace{1em} fem_{eff} = \frac{fem_0}{\sqrt{2}} \hspace{1em} \rightarrow \hspace{1em} \overline{P} = I_{eff}\cdot fem_{eff} $$
+
+\subsubsection{Circuito capacitivo}
+La tensione e la corrente sono sfasati di $\frac{\pi}{2}$, e di conseguenza la potenza media è nulla. \\
+Si introduce la reattanza capacitiva $X_c$, per la quale:
+$$ fem_{eff} = X_c \cdot I_{eff} \hspace{1em} \text{con} \hspace{1em} X_c = \frac{1}{2\pi fC} $$
+dove $f$ è la frequenza e $C$ è la capacità del condensatore.
+
+\subsubsection{Circuito induttivo}
+Anche qui, la tensione e la corrente sono sfasati di $\frac{\pi}{2}$, e di conseguenza la potenza media è nulla. \\
+Si introduce la reattanza induttiva $X_l$, per la quale:
+$$ fem_{eff} = X_l \cdot I_{eff} \hspace{1em} \text{con} \hspace{1em} X_l = 2\pi fL $$
+dove $f$ è la frequenza e $L$ è l'induttanza dell'induttore.
+
+
 \end{document}
