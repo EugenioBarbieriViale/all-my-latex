@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{amsmath}
+
+\title{Integral}
+\author{Eugenio Barbieri Viale}
+
+\begin{document}
+\setlength{\parindent}{0pt}
+
+\maketitle
+
+$$ I = \int_0^\infty W\left(\frac{1}{x^2}\right)dx $$
+Find $I$, with $W(x)$ being the W Lambert function, defined as the inverse function of $xe^x$:
+$$ W(xe^x) = x $$
+
+Let's substitute:
+\begin{align}
+    ue^u &= \frac{1}{x^2} \\
+    x &= e^{-\frac{1}{2}u}\frac{1}{\sqrt{u}} \\
+    dx &= \frac{d}{du}\left(e^{-\frac{1}{2}u}\frac{1}{\sqrt{u}}\right)du \\
+       &= \left(-\frac{1}{2\sqrt{u^3}}e^{-\frac{1}{2}u}-\frac{1}{2\sqrt{u}}e^{-\frac{1}{2}u}\right)du \\
+       &= -\frac{1}{2}e^{-\frac{1}{2}u}\left(\frac{1}{\sqrt{u^3}} + \frac{1}{\sqrt{u}}\right)du \\
+       &= -\frac{\sqrt{u}(1+u)}{2u^2}e^{-\frac{1}{2}u}du
+\end{align}
+
+Before substituting, let's check the boundaries:
+\begin{align}
+    &\lim_{u\to0} e^{-\frac{1}{2}u}\frac{1}{\sqrt{u}} = [\infty] \\
+    &\lim_{u\to\infty} e^{-\frac{1}{2}u}\frac{1}{\sqrt{u}} = \sqrt{\frac{1}{ue^u}} = \frac{1}{[\infty]} = 0
+\end{align}
+
+So, if $x$ goes to $0$, $u$ must go to infinity, and if $x$ goes to infinity, $u$ must go to $0$, so we will have to switch the boundaries of the integral when substituting. But first, for convenience, we shall write:
+\begin{align}
+    \alpha(u) &= e^{-\frac{1}{2}u}\frac{1}{\sqrt{u}} \\
+    \frac{d}{du}\alpha(u) &= -\frac{\sqrt{u}(1+u)}{2u^2}e^{-\frac{1}{2}u}
+\end{align}
+
+Now we can rewrite the integral:
+\begin{align}
+    I &= \int_\infty^0 -W\left(ue^u\right)\frac{\sqrt{u}(1+u)}{2u^2}e^{-\frac{1}{2}u}du \\
+      &= -\int_\infty^0 u\frac{\sqrt{u}(1+u)}{2u^2}e^{-\frac{1}{2}u}du \\
+      &= \int_0^\infty u \left(-\frac{d}{du}\alpha(u)\right)du
+\end{align}
+
+Now let's integrate by parts:
+
+\begin{align}
+    I &= -u\alpha(u)\Biggr|_{0}^{\infty} + \int_0^\infty \alpha(u)du
+\end{align}
+
+This leaves us with another integral to calculate:
+\begin{align}
+    \tilde{I} = \int_0^\infty \alpha(u)du = \int_0^\infty e^{-\frac{1}{2}u}\frac{1}{\sqrt{u}}du
+\end{align}
+
+That square root at the denominator resembles the derivative of the square root function itself, so let's substitute and hope for the best:
+
+\begin{align}
+    v = \sqrt{u} \hspace{1em} &\rightarrow \hspace{1em} |u| = v^2 \\
+    du &= (2v)dv \\
+    \tilde{I} &= \int_0^\infty \left(e^{-\frac{1}{2}v^2}\frac{1}{v}2v\right)dv \\
+              &= 2\int_0^\infty e^{-\frac{1}{2}v^2} dv
+\end{align}
+
+Since the integrand is an even function, we can rewrite the integral with new boundaries:
+\begin{align}
+    \tilde{I} = \int_{-\infty}^{+\infty} e^{-\frac{1}{2}v^2} dv
+\end{align}
+
+And now, with one final substitution, we will find the Gaussian integral in our hands!
+\begin{align}
+    w = \frac{v}{\sqrt{2}} \hspace{1em} &\rightarrow \hspace{1em} v = \sqrt{2}w \\
+    dv &= (\sqrt{2})dw \\
+    \tilde{I} &= \sqrt{2}\int_{-\infty}^{+\infty} e^{-w^2} dw \\
+              &= \sqrt{2\pi}
+\end{align}
+
+Now, let's head back to $(14)$:
+\begin{align}
+    I &= -\frac{u}{\sqrt{u}}e^{-\frac{1}{2}u}\Biggr|_{0}^{\infty} + \tilde{I} \\
+      &= -\sqrt{\frac{u^2}{ue^u}}\Biggr|_{0}^{\infty} + \sqrt{2\pi} \\
+      &= -\lim_{u\to\infty}\sqrt{\frac{u}{e^u}} + \lim_{u\to0}\sqrt{\frac{u}{e^u}} + \sqrt{2\pi}
+\end{align}
+
+We can easly see that both limits are equal to $0$, so this leaves us with our final answer:
+$$ I = \int_0^\infty W\left(\frac{1}{x^2}\right)dx = \sqrt{2\pi} $$
+
+\end{document}
